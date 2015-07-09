@@ -1,0 +1,1633 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JPanelFormInfo">
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="jPanel2" max="32767" attributes="0"/>
+                  <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jPanel3" alignment="1" max="32767" attributes="0"/>
+              </Group>
+              <EmptySpace max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Container class="javax.swing.JPanel" name="jPanel1">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="&#x411;&#x435;&#x441;&#x442; &#x414;&#x438;&#x434;&#x436;&#x438;&#x442;&#x430;&#x43b; &#x41f;&#x43b;&#x430;&#x437;&#x430; &#x41a;&#x43e;&#x440;&#x43f;&#x43e;&#x440;&#x435;&#x439;&#x448;&#x43d; - www.elko.ru"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jTextField1" min="-2" pref="266" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Component id="jTextField2" min="-2" pref="80" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Component id="jTextField3" min="-2" pref="80" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="jTextField4" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jTextField5" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                  <Component id="jTextField6" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Component id="jComboBox2" min="-2" pref="192" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jScrollPane2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jComboBox3" min="-2" pref="140" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+              <Component id="jPanel4" alignment="0" max="32767" attributes="0"/>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                          <Component id="jScrollPane2" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="jTextField1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox1" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField4" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField6" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JComboBox" name="jComboBox3">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="7">
+                <StringItem index="0" value="&#x411;&#x440;&#x435;&#x43d;&#x434; - &#x43c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440;&#x44b;"/>
+                <StringItem index="1" value="Sony - &#x421;&#x412;. &#x413;&#x42d;. &#x41a;&#x410;. &#x421;&#x412;. &#x41c;&#x41c;. &#x410;&#x414;. &#x41c;&#x410;. &#x411;&#x410;. &#x41a;&#x41d;. &#x41a;&#x410;. &#x413;&#x417;. &#x412;&#x414;"/>
+                <StringItem index="2" value="Panasonic - &#x428;&#x410;. &#x422;&#x421;. &#x413;&#x414;. &#x410;&#x414;. &#x41a;&#x41d;"/>
+                <StringItem index="3" value="Nikon - &#x41a;&#x410;. &#x410;&#x414;. &#x41c;&#x410;. &#x425;&#x410;"/>
+                <StringItem index="4" value="Transcend - &#x411;&#x410;. &#x41a;&#x41d;. &#x413;&#x417;. &#x412;&#x414;"/>
+                <StringItem index="5" value="Canon - &#x418;&#x41d;. &#x421;&#x412;. &#x41a;&#x410;. &#x410;&#x414;. &#x41c;&#x410;. &#x425;&#x410;"/>
+                <StringItem index="6" value="FujiFilm - &#x410;&#x414;. &#x41c;&#x410;"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x43c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440;&#x43e;&#x432; &#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x430; &#x438; &#x435;&#x433;&#x43e; &#x43a;&#x43e;&#x43d;&#x442;&#x430;&#x43a;&#x442;&#x44b;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[270, 20]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox3ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox2">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="12">
+                <StringItem index="0" value="&#x41c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440; &#x438; &#x43a;&#x43e;&#x43d;&#x442;&#x430;&#x43a;&#x442;"/>
+                <StringItem index="1" value="&#x410;&#x432;&#x433;&#x443;&#x441;&#x442; - post5@mail.ru"/>
+                <StringItem index="2" value="- 84957750679 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="3" value="&#x410;&#x432;&#x433;&#x443;&#x441;&#x442;&#x430; - post6@mail.ru"/>
+                <StringItem index="4" value="- 84957750680 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="5" value="&#x410;&#x432;&#x434;&#x435;&#x439; - post7@mail.ru"/>
+                <StringItem index="6" value="- 84957750681 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="7" value="&#x410;&#x432;&#x440;&#x430;&#x430;&#x43c; - post8@mail.ru"/>
+                <StringItem index="8" value="- 84957750682 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="9" value="&#x410;&#x432;&#x440;&#x43e;&#x440;&#x430; - post9@mail.ru"/>
+                <StringItem index="10" value="- 84957750683 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="11" value=""/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x43c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440;&#x43e;&#x432; &#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x430; &#x438; &#x435;&#x433;&#x43e; &#x43a;&#x43e;&#x43d;&#x442;&#x430;&#x43a;&#x442;&#x44b;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[270, 20]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox2ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox1">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="5">
+                <StringItem index="0" value="&#x41f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x438;&#x435; &#x43d;&#x430;&#x43a;&#x43b;&#x430;&#x434;&#x43d;&#x44b;&#x435;"/>
+                <StringItem index="1" value="&#x432;&#x43e;&#x437;&#x432;&#x440;&#x430;&#x449;&#x435;&#x43d;&#x438;&#x435; &#x442;&#x43e;&#x432;&#x430;&#x440;&#x430; - 22.04"/>
+                <StringItem index="2" value="&#x410;999/i08483/07 - 15.04"/>
+                <StringItem index="3" value="&#x41f;&#x440;&#x435;&#x434;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x430; - 10.04"/>
+                <StringItem index="4" value="&#x41c;&#x43c;&#x420;&#x41a;0000126 - 28.03"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x441;&#x43c;&#x43e;&#x442;&#x440; &#x43d;&#x430;&#x43a;&#x43b;&#x430;&#x434;&#x43d;&#x44b;&#x445; &#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[270, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane2">
+          <Properties>
+            <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea2">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="12" style="0"/>
+                </Property>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x43f;&#x43e;&#x43b;&#x43d;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x430; &#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x435;"/>
+                <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x43b;&#x44c;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44f; &#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x435;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JTextField" name="jTextField2">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" USD"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x412;&#x430;&#x43b;&#x44e;&#x442;&#x43d;&#x44b;&#x439; &#x434;&#x43e;&#x43b;&#x433;. + &#x434;&#x43e;&#x43b;&#x433; = &#x43c;&#x44b; &#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x44b; &#x434;&#x435;&#x43d;&#x435;&#x433; &#x43f;&#x43e;&#x441;&#x442;&#x443;, - &#x434;&#x43e;&#x43b;&#x433; = &#x43f;&#x43e;&#x441;&#x442; &#x43d;&#x430;&#x43c; &#x434;&#x43e;&#x43b;&#x436;&#x435;&#x43d;(&#x43d;&#x430;&#x43f;&#x440;&#x43c;&#x435;&#x440; &#x437;&#x430; &#x43f;&#x440;&#x435;&#x434;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x44b; &#x438;&#x43b;&#x438; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField1">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x411;&#x435;&#x441;&#x442; &#x414;&#x438;&#x434;&#x436;&#x438;&#x442;&#x430;&#x43b; &#x41f;&#x43b;&#x430;&#x437;&#x430; &#x41a;&#x43e;&#x440;&#x43f;&#x43e;&#x440;&#x435;&#x439;&#x448;&#x43d; &#x434;&#x43b;&#x44f; &#x440;&#x438;&#x431;&#x435;&#x439;&#x442;&#x430;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;, &#x43d;&#x430;&#x436;&#x43c;&#x438;&#x442;&#x435; &#x434;&#x43b;&#x44f; &#x434;&#x435;&#x442;&#x430;&#x43b;&#x44c;&#x43d;&#x43e;&#x439; &#x43d;&#x430;&#x441;&#x442;&#x440;&#x43e;&#x439;&#x43a;&#x438; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[150, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField4">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="180"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x440;&#x43e;&#x43a; &#x43e;&#x442;&#x441;&#x440;&#x43e;&#x447;&#x43a;&#x438; - &#x434;&#x43d;&#x435;&#x439;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField3">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" RUB"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x420;&#x443;&#x431;&#x43b;&#x435;&#x432;&#x44b;&#x439; &#x434;&#x43e;&#x43b;&#x433;. + &#x434;&#x43e;&#x43b;&#x433; = &#x43c;&#x44b; &#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x44b; &#x434;&#x435;&#x43d;&#x435;&#x433; &#x43f;&#x43e;&#x441;&#x442;&#x443;, - &#x434;&#x43e;&#x43b;&#x433; = &#x43f;&#x43e;&#x441;&#x442; &#x43d;&#x430;&#x43c; &#x434;&#x43e;&#x43b;&#x436;&#x435;&#x43d;(&#x43d;&#x430;&#x43f;&#x440;&#x43c;&#x435;&#x440; &#x437;&#x430; &#x43f;&#x440;&#x435;&#x434;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x44b; &#x438;&#x43b;&#x438; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField5">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" 7.7%"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; &#x43e;&#x442; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField6">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2%"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x420;&#x438;&#x431;&#x435;&#x439;&#x442; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JPanel" name="jPanel4">
+          <Properties>
+            <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+              <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                <TitledBorder title="&#x414;&#x43e;&#x43f;&#x43e;&#x43b;&#x44c;&#x43d;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435; &#x43d;&#x430;&#x439;&#x441;&#x442;&#x440;&#x43e;&#x43a;&#x438; - &#x43f;&#x43e;&#x43a;&#x430;&#x437;&#x430;&#x442;&#x44c;/&#x441;&#x43a;&#x440;&#x44b;&#x442;&#x44c;"/>
+              </Border>
+            </Property>
+          </Properties>
+
+          <Layout>
+            <DimensionLayout dim="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                      <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jPanel7" max="32767" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+            <DimensionLayout dim="1">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="jPanel6" min="-2" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jPanel8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Component id="jPanel7" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace pref="129" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+            </DimensionLayout>
+          </Layout>
+          <SubComponents>
+            <Container class="javax.swing.JPanel" name="jPanel6">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="&#x420;&#x438;&#x431;&#x435;&#x439;&#x442;&#x44b; &#x438; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x438; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" attributes="0">
+                                  <Group type="102" alignment="1" attributes="0">
+                                      <Component id="jTextField21" min="-2" pref="114" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTextField22" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Component id="jScrollPane4" min="-2" pref="243" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jScrollPane1" alignment="0" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jComboBox9" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTextField14" min="-2" pref="65" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jButton2" min="-2" pref="69" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <Component id="jLabel4" alignment="0" min="-2" pref="98" max="-2" attributes="0"/>
+                              <Group type="103" alignment="0" groupAlignment="1" max="-2" attributes="0">
+                                  <Group type="102" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jCheckBox1" alignment="1" min="-2" max="-2" attributes="0"/>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="48" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="32767" attributes="0"/>
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Component id="jTextField37" min="-2" pref="41" max="-2" attributes="0"/>
+                                          <Component id="jTextField23" min="-2" pref="41" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="0" attributes="0">
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jTextField18" min="-2" pref="67" max="-2" attributes="0"/>
+                                                  <Component id="jTextField15" min="-2" pref="67" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                                  <Component id="jTextField19" min="-2" pref="62" max="-2" attributes="0"/>
+                                                  <Component id="jTextField16" min="-2" pref="62" max="-2" attributes="0"/>
+                                              </Group>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="jTextField17" min="-2" pref="38" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <EmptySpace min="-2" pref="141" max="-2" attributes="0"/>
+                                              <Component id="jTextField20" min="-2" pref="38" max="-2" attributes="0"/>
+                                          </Group>
+                                          <Component id="jCheckBox2" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox1" min="-2" max="-2" attributes="0"/>
+                                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                                  <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jLabel26" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField23" min="-2" pref="16" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="1" attributes="0">
+                                      <Component id="jLabel27" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField37" min="-2" pref="16" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jTextField14" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton2" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox9" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane1" min="-2" pref="42" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTextField15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jTextField18" min="-2" max="-2" attributes="0"/>
+                                      <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                          <Component id="jTextField20" alignment="3" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jTextField19" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox2" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace max="32767" attributes="0"/>
+                          <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jTextField21" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField22" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jButton3" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="jScrollPane4" min="-2" pref="42" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JTextField" name="jTextField20">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="5 %"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x446;&#x435;&#x43d;&#x442; &#x440;&#x438;&#x431;&#x435;&#x439;&#x442;&#x430; &#x43f;&#x440;&#x438; &#x432;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x435;&#x43d;&#x438;&#x438; &#x443;&#x441;&#x43b;&#x43e;&#x432;&#x438;&#x439;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField14">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; %"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x417;&#x430;&#x434;&#x430;&#x442;&#x44c; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x443; &#x434;&#x43b;&#x44f; &#x432;&#x44b;&#x431;&#x440;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField15">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="500 000"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430; &#x434;&#x43b;&#x44f; &#x43d;&#x430;&#x431;&#x43e;&#x440;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField19">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="3 &#x43c;&#x435;&#x441;&#x44f;&#x446;&#x430;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x440;&#x43e;&#x43a; &#x43d;&#x430;&#x431;&#x43e;&#x440;&#x430; &#x441;&#x443;&#x43c;&#x43c;&#x44b;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox9">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="&#x412;&#x44b;&#x431;&#x43e;&#x440; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x430;"/>
+                        <StringItem index="1" value="Intel"/>
+                        <StringItem index="2" value="OCZ"/>
+                        <StringItem index="3" value="WD"/>
+                        <StringItem index="4" value="Hitachi"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x412;&#x44b;&#x431;&#x43e;&#x440; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x430; &#x434;&#x43b;&#x44f; &#x434;&#x43e;&#x431;&#x430;&#x432;&#x43b;&#x435;&#x43d;&#x438;&#x44f; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c; &#x432;&#x44b;&#x431;&#x440;&#x430;&#x43d;&#x43d;&#x438;&#x439; &#x431;&#x440;&#x435;&#x43d;&#x434; &#x441;&#x43e; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x43e;&#x439;"/>
+                    <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                      <Insets value="[2, 4, 2, 4]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField16">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="3 &#x43c;&#x435;&#x441;&#x44f;&#x446;&#x430;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x440;&#x43e;&#x43a; &#x43d;&#x430;&#x431;&#x43e;&#x440;&#x430; &#x441;&#x443;&#x43c;&#x43c;&#x44b;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField17">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="3 %"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x446;&#x435;&#x43d;&#x442; &#x440;&#x438;&#x431;&#x435;&#x439;&#x442;&#x430; &#x43f;&#x440;&#x438; &#x432;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x435;&#x43d;&#x438;&#x438; &#x443;&#x441;&#x43b;&#x43e;&#x432;&#x438;&#x439;"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane4">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="jTextArea4">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="11" style="0"/>
+                        </Property>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="100 000 - 0,5% - &#x445;&#xa;150 000- 1% - &#x445;&#xa;250 000 - 2,5% - &#x445;&#xa;"/>
+                        <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x441;&#x443;&#x43c;&#x43c; &#x438; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x43e;&#x43a; &#x43f;&#x440;&#x435;&#x434;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x43b;&#x44f;&#x435;&#x43c;&#x44b;&#x439; &#x43d;&#x430; &#x43d;&#x438;&#x445;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JTextField" name="jTextField18">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1 000 000"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430; &#x434;&#x43b;&#x44f; &#x43d;&#x430;&#x431;&#x43e;&#x440;&#x430;"/>
+                  </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextField18ActionPerformed"/>
+                  </Events>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField22">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; %"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x417;&#x430;&#x434;&#x430;&#x442;&#x44c; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x443; &#x43d;&#x430; &#x441;&#x443;&#x43c;&#x43c;&#x443;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41d;&#x430; &#x441;&#x443;&#x43c;&#x43c;&#x443; &#x437;&#x430;&#x43a;&#x430;&#x437;&#x430;:"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430; &#x43f;&#x440;&#x438; &#x43d;&#x430;&#x431;&#x43e;&#x440;&#x435; &#x43e;&#x43f;&#x440;&#x435;&#x434;&#x435;&#x43b;&#x435;&#x43d;&#x43d;&#x43e;&#x439; &#x441;&#x443;&#x43c;&#x43c;&#x44b; &#x437;&#x430;&#x43a;&#x430;&#x437;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField21">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430; &#x434;&#x43b;&#x44f; &#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x435;&#x43d;&#x438;&#x44f; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JPanel" name="jPanel5">
+                  <Properties>
+                    <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                      <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+                        <LineBorder>
+                          <Color PropertyName="color" blue="99" green="99" red="99" type="rgb"/>
+                        </LineBorder>
+                      </Border>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x442;&#x430;&#x442;&#x438;&#x441;&#x442;&#x438;&#x43a;&#x430; &#x432;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x435;&#x43d;&#x438;&#x44f;"/>
+                  </Properties>
+
+                  <Layout>
+                    <DimensionLayout dim="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="1" attributes="0">
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" alignment="1" groupAlignment="0" attributes="0">
+                                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Group type="102" alignment="1" attributes="0">
+                                          <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                    <DimensionLayout dim="1">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                              <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                    </DimensionLayout>
+                  </Layout>
+                  <SubComponents>
+                    <Component class="javax.swing.JLabel" name="jLabel7">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&#x412;&#x435;&#x440;&#x43e;&#x44f;&#x442;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x443;&#x441;&#x43f;&#x435;&#x445;&#x430;: 93%"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel5">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x435;&#x43d;&#x43e;: 68%"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel8">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&#x411;&#x43e;&#x43d;&#x443;&#x441;: 15 000 &#x440;&#x443;&#x431;."/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel6">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&#x41e;&#x441;&#x442;&#x430;&#x43b;&#x43e;&#x441;&#x44c; &#x434;&#x43e; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43d;&#x438;&#x44f;: 25&#x434;"/>
+                      </Properties>
+                    </Component>
+                    <Component class="javax.swing.JLabel" name="jLabel9">
+                      <Properties>
+                        <Property name="text" type="java.lang.String" value="&#x412;&#x44b;&#x43f;&#x43e;&#x43b;&#x43d;&#x435;&#x43d;&#x438;&#x435; &#x432; &#x434;&#x435;&#x43d;&#x44c;: 1,03 % "/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JButton" name="jButton3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c; &#x441;&#x443;&#x43c;&#x43c;&#x443; &#x441;&#x43e; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x43e;&#x439;"/>
+                    <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                      <Insets value="[2, 4, 2, 4]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel3">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x420;&#x438;&#x431;&#x435;&#x439;&#x442; &#x43d;&#x430; &#x43e;&#x431;&#x43e;&#x440;&#x43e;&#x442;:"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x420;&#x438;&#x431;&#x435;&#x439;&#x442; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430; &#x43d;&#x430; &#x434;&#x43e;&#x441;&#x442;&#x438;&#x436;&#x435;&#x43d;&#x438;&#x435; &#x43e;&#x431;&#x43e;&#x440;&#x43e;&#x442;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane1">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="jTextArea1">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="11" style="0"/>
+                        </Property>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="WD - 2% - x&#xa;Hitachi - 1% - x"/>
+                        <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x43e;&#x432; &#x438; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x430; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x430;&#x44f; &#x43d;&#x430; &#x43d;&#x438;&#x445; &#x434;&#x430;&#x435;&#x442;&#x441;&#x44f;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JLabel" name="jLabel2">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x438; &#x43d;&#x430; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x44b;:"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430; &#x43d;&#x430; &#x442;&#x43e;&#x432;&#x430;&#x440;&#x44b; &#x432;&#x44b;&#x431;&#x440;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox1">
+                  <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="&#x423;&#x447;&#x438;&#x442;&#x44b;&#x432;&#x430;&#x442;&#x44c; &#x43f;&#x440;&#x438; &#x437;&#x430;&#x43a;&#x430;&#x437;&#x430;&#x445;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x423;&#x447;&#x438;&#x442;&#x44b;&#x432;&#x430;&#x442;&#x44c; &#x434;&#x43e;&#x43f;&#x43e;&#x43b;&#x44c;&#x43d;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x44b;&#x435; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x438; &#x43f;&#x440;&#x438; &#x43e;&#x444;&#x43e;&#x440;&#x43c;&#x43b;&#x435;&#x43d;&#x438;&#x438; &#x437;&#x430;&#x43a;&#x430;&#x437;&#x43e;&#x432;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox2">
+                  <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="&#x423;&#x432;&#x435;&#x434;&#x43e;&#x43c;&#x43b;&#x44f;&#x442;&#x44c; &#x43e; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43d;&#x438;&#x438;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x423;&#x432;&#x435;&#x434;&#x43e;&#x43c;&#x43b;&#x44f;&#x442;&#x44c; &#x43e; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x430;&#x44e;&#x449;&#x435;&#x43c;&#x441;&#x44f; &#x441;&#x440;&#x43e;&#x43a;&#x435; &#x43d;&#x430;&#x431;&#x43e;&#x440;&#x44b; &#x441;&#x443;&#x43c;&#x43c;&#x44b;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel26">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; &#x437;&#x430; &#x43a;&#x440;&#x435;&#x434;&#x438;&#x442;:"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x443;&#x44e; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a; &#x434;&#x430;&#x435;&#x442; &#x437;&#x430; &#x43d;&#x430;&#x43b; &#x440;&#x430;&#x441;&#x447;&#x435;&#x442;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel27">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; &#x437;&#x430; &#x43f;&#x440;&#x435;&#x434;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x443;:"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430;, &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x443;&#x44e; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a; &#x434;&#x430;&#x435;&#x442; &#x437;&#x430; &#x43f;&#x440;&#x435;&#x434;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x443; &#x442;&#x43e;&#x432;&#x430;&#x440;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField23">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="6%"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x43f;&#x440;&#x43e;&#x446;&#x435;&#x43d;&#x442; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField37">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="3 %"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x43f;&#x440;&#x43e;&#x446;&#x435;&#x43d;&#x442; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x438;"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel7">
+              <Properties>
+                <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+                  <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+                    <TitledBorder title="&#x410;&#x43a;&#x446;&#x438;&#x438; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+                  </Border>
+                </Property>
+              </Properties>
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" attributes="0">
+                                          <Component id="jLabel12" alignment="0" min="-2" max="-2" attributes="0"/>
+                                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                      </Group>
+                                      <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Component id="jCheckBox3" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                          <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
+                                          <EmptySpace max="-2" attributes="0"/>
+                                          <Component id="jComboBox10" min="-2" pref="320" max="-2" attributes="0"/>
+                                          <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
+                                          <Component id="jComboBox18" min="-2" pref="320" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Group type="102" alignment="1" attributes="0">
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jScrollPane10" alignment="0" max="32767" attributes="0"/>
+                                      <Group type="102" attributes="0">
+                                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                              <Component id="jScrollPane11" alignment="0" max="32767" attributes="0"/>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jComboBox14" min="-2" pref="97" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField39" min="-2" pref="50" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jTextField31" min="-2" pref="124" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jTextField40" min="-2" pref="144" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jComboBox16" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jTextField43" min="-2" pref="40" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jButton5" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jTextField41" min="-2" pref="101" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField32" min="-2" pref="127" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField42" min="-2" pref="165" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jComboBox17" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField38" min="-2" pref="56" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jButton6" min="-2" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Group type="102" alignment="0" attributes="0">
+                                                  <Component id="jTextField35" min="-2" pref="59" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jTextField33" min="-2" pref="44" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jTextField34" min="-2" pref="46" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jTextField24" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jTextField36" min="-2" pref="141" max="-2" attributes="0"/>
+                                                  <EmptySpace max="-2" attributes="0"/>
+                                                  <Component id="jComboBox15" min="-2" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jTextField44" min="-2" pref="40" max="-2" attributes="0"/>
+                                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                                  <Component id="jButton4" min="-2" pref="21" max="-2" attributes="0"/>
+                                              </Group>
+                                              <Component id="jScrollPane12" alignment="0" max="32767" attributes="0"/>
+                                          </Group>
+                                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                                  <EmptySpace max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" attributes="0">
+                                      <Component id="jScrollPane13" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane9" alignment="0" min="-2" pref="332" max="-2" attributes="0"/>
+                                      <Component id="jScrollPane5" min="-2" pref="332" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                          </Group>
+                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="jCheckBox3" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jLabel13" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox18" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTextField33" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField34" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField35" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox15" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField24" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField36" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField44" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane10" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="jScrollPane5" min="-2" pref="52" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel12" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTextField39" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox16" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField31" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField40" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField43" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton5" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane11" pref="0" max="32767" attributes="0"/>
+                              </Group>
+                              <Component id="jScrollPane9" min="-2" pref="46" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="102" attributes="0">
+                                  <Group type="103" groupAlignment="3" attributes="0">
+                                      <Component id="jTextField41" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jComboBox17" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField32" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField42" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jTextField38" alignment="3" min="-2" max="-2" attributes="0"/>
+                                      <Component id="jButton6" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  </Group>
+                                  <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane12" min="-2" pref="36" max="-2" attributes="0"/>
+                              </Group>
+                              <Component id="jScrollPane13" min="-2" pref="61" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JLabel" name="jLabel11">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41d;&#x430; &#x441;&#x443;&#x43c;&#x43c;&#x443;:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel10">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41d;&#x430; &#x442;&#x43e;&#x432;&#x430;&#x440;&#x44b;:"/>
+                    <Property name="toolTipText" type="java.lang.String" value=""/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel12">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41d;&#x430; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x44b;:"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane5">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="jTextArea5">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="10" style="0"/>
+                        </Property>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x434;&#x440;&#x43e;&#x431;&#x43d;&#x44b;&#x435; &#x443;&#x441;&#x43b;&#x43e;&#x432;&#x438;&#x44f; &#x430;&#x43a;&#x446;&#x438;&#x438;: &#x43a;&#x443;&#x43f;&#x438;&#x442;&#x44c; 200 &#x442;&#x43e;&#x432;&#x430;&#x440;&#x43e;&#x432; 87384 &#x434;&#x43e; 28.07 &#x438; &#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x438; &#x43c;&#x43e;&#x43d;&#x43e;&#x431;&#x43b;&#x43e;&#x43a;"/>
+                        <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44f; &#x43e;&#x431; &#x430;&#x43a;&#x446;&#x438;&#x438; &#x432; &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x43b;&#x44c;&#x43d;&#x43e;&#x43c; &#x432;&#x438;&#x434;&#x435;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JTextField" name="jTextField24">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1.05.2015 - 28.07.2015"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x440;&#x43e;&#x43a;&#x438; &#x43f;&#x440;&#x43e;&#x432;&#x435;&#x434;&#x435;&#x43d;&#x438;&#x44f; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane9">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="jTextArea9">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="10" style="0"/>
+                        </Property>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="&#x41a;&#x443;&#x43f;&#x438; &#x442;&#x43e;&#x432;&#x430;&#x440;&#x430; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x430; Intel &#x43d;&#x430; &#x441;&#x443;&#x43c;&#x43c;&#x443; 5 &#x43c;&#x43b;&#x43d; &#x438; &#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x438; &#x43f;&#x443;&#x442;&#x435;&#x432;&#x43a;&#x443; &#x43d;&#x430; &#x411;&#x430;&#x43b;&#x438;"/>
+                        <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44f; &#x43e;&#x431; &#x430;&#x43a;&#x446;&#x438;&#x438; &#x432; &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x43b;&#x44c;&#x43d;&#x43e;&#x43c; &#x432;&#x438;&#x434;&#x435;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JTextField" name="jTextField33">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;-&#x432;&#x43e;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x41a;&#x43e;&#x43b;&#x438;&#x447;&#x435;&#x441;&#x442;&#x432;&#x43e; &#x43d;&#x435;&#x43e;&#x431;&#x445;&#x43e;&#x434;&#x438;&#x43c;&#x43e;&#x435; &#x43a;&#x443;&#x43f;&#x438;&#x442;&#x44c; &#x434;&#x43b;&#x44f; &#x443;&#x441;&#x43f;&#x435;&#x448;&#x43d;&#x43e;&#x433;&#x43e; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43d;&#x438;&#x44f;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField34">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430; &#x43d;&#x430; &#x43a;&#x43e;&#x442;&#x43e;&#x440;&#x443;&#x44e; &#x43d;&#x443;&#x436;&#x43d;&#x43e; &#x43a;&#x443;&#x43f;&#x438;&#x442;&#x44c; &#x434;&#x430;&#x43d;&#x43d;&#x44b;&#x435; &#x442;&#x43e;&#x432;&#x430;&#x440;&#x44b;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField35">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x422;&#x43e;&#x432;&#x430;&#x440;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x422;&#x43e;&#x432;&#x430;&#x440;&#x44b; &#x443;&#x447;&#x430;&#x432;&#x441;&#x442;&#x432;&#x443;&#x44e;&#x449;&#x438;&#x435; &#x432; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox15">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="&#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c;"/>
+                        <StringItem index="1" value="&#x41e;&#x431;&#x44b;&#x447;&#x43d;&#x430;&#x44f;"/>
+                        <StringItem index="2" value="&#x412;&#x44b;&#x441;&#x43e;&#x43a;&#x430;&#x44f;"/>
+                        <StringItem index="3" value="&#x41d;&#x438;&#x437;&#x43a;&#x430;&#x44f;"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x43e;&#x442; &#x443;&#x447;&#x430;&#x441;&#x442;&#x438;&#x44f; &#x432; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane10">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="jTextArea10">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="10" style="0"/>
+                        </Property>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="87384 - 200&#x448;&#x442; - 1.05.2015 - 28.07.2015 - &#x43c;&#x43e;&#x43d;&#x43e;&#x431;&#x43b;&#x43e;&#x43a; &#x410;&#x441;&#x435;&#x440; 44325 - &#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x432;&#x44b;&#x441;&#x43e;&#x43a;&#x430;&#x44f; - &#x428;&#x430;&#x43d;&#x441; &#x443;&#x441;&#x43f;&#x435;&#x445;&#x430; 250%"/>
+                        <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x430;&#x43a;&#x446;&#x438;&#x439;, &#x438; &#x43f;&#x43e;&#x434;&#x440;&#x43e;&#x431;&#x43d;&#x44b;&#x435; &#x443;&#x441;&#x43b;&#x43e;&#x432;&#x438;&#x44f; &#x443;&#x447;&#x430;&#x441;&#x442;&#x438;&#x44f;"/>
+                        <Property name="wrapStyleWord" type="boolean" value="true"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JTextField" name="jTextField36">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x434;&#x430;&#x440;&#x43e;&#x43a;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x411;&#x43e;&#x43d;&#x443;&#x441; &#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x430;&#x435;&#x43c;&#x44b;&#x439; &#x43f;&#x440;&#x438; &#x443;&#x441;&#x43f;&#x435;&#x448;&#x43d;&#x43e;&#x43c; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43d;&#x438;&#x438; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane11">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="jTextArea11">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="10" style="0"/>
+                        </Property>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="Intel - 5 &#x43c;&#x43b;&#x43d; - 1.05.2015 - 28.07.2015 - &#x43f;&#x443;&#x442;&#x435;&#x432;&#x43a;&#x430; &#x43d;&#x430; &#x411;&#x430;&#x43b;&#x438; - &#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x43d;&#x438;&#x437;&#x43a;&#x430;&#x44f; - &#x428;&#x430;&#x43d;&#x441; &#x443;&#x441;&#x43f;&#x435;&#x445;&#x430; 49% - 1 &#x440;&#x430;&#x437;"/>
+                        <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x434;&#x440;&#x43e;&#x431;&#x43d;&#x44b;&#x435; &#x443;&#x441;&#x43b;&#x43e;&#x432;&#x438;&#x44f; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JTextField" name="jTextField39">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField31">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="25.05.2015 - 25.09.2015"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x440;&#x43e;&#x43a;&#x438; &#x43f;&#x440;&#x43e;&#x432;&#x435;&#x434;&#x435;&#x43d;&#x438;&#x44f; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField40">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x434;&#x430;&#x440;&#x43e;&#x43a;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox16">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="&#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c;"/>
+                        <StringItem index="1" value="&#x41e;&#x431;&#x44b;&#x447;&#x43d;&#x430;&#x44f;"/>
+                        <StringItem index="2" value="&#x412;&#x44b;&#x441;&#x43e;&#x43a;&#x430;&#x44f;"/>
+                        <StringItem index="3" value="&#x41d;&#x438;&#x437;&#x43a;&#x430;&#x44f;"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x43e;&#x442; &#x443;&#x447;&#x430;&#x441;&#x442;&#x438;&#x44f; &#x432; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox14">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="&#x412;&#x44b;&#x431;&#x43e;&#x440; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x430;"/>
+                        <StringItem index="1" value="Intel"/>
+                        <StringItem index="2" value="OCZ"/>
+                        <StringItem index="3" value="WD"/>
+                        <StringItem index="4" value="Hitachi"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x412;&#x44b;&#x431;&#x43e;&#x440; &#x431;&#x440;&#x435;&#x43d;&#x434;&#x430; &#x434;&#x43b;&#x44f; &#x434;&#x43e;&#x431;&#x430;&#x432;&#x43b;&#x435;&#x43d;&#x438;&#x44f; &#x441;&#x43a;&#x438;&#x434;&#x43a;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane12">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="jTextArea12">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="10" style="0"/>
+                        </Property>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="200 &#x442;.&#x440; - 1.05.2015 - 30.08.2015 - &#x421;&#x435;&#x440;&#x442;&#x435;&#x444;&#x438;&#x43a;&#x430;&#x442; &#x41c;.&#x412;&#x438;&#x434;&#x435;&#x43e; &#x43d;&#x430; 1000&#x440; - &#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x43e;&#x431;&#x44b;&#x447;&#x43d;&#x430;&#x44f; - &#x428;&#x430;&#x43d;&#x441; &#x443;&#x441;&#x43f;&#x435;&#x445;&#x430; 800% - 50 &#x440;&#x430;&#x437;"/>
+                        <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x434;&#x440;&#x43e;&#x431;&#x43d;&#x44b;&#x435; &#x443;&#x441;&#x43b;&#x43e;&#x432;&#x438;&#x44f; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JTextField" name="jTextField41">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x421;&#x443;&#x43c;&#x43c;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField32">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1.05.2015 - 30.08.2015"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x440;&#x43e;&#x43a;&#x438; &#x43f;&#x440;&#x43e;&#x432;&#x435;&#x434;&#x435;&#x43d;&#x438;&#x44f; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField42">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x434;&#x430;&#x440;&#x43e;&#x43a;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox17">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="4">
+                        <StringItem index="0" value="&#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c;"/>
+                        <StringItem index="1" value="&#x41e;&#x431;&#x44b;&#x447;&#x43d;&#x430;&#x44f;"/>
+                        <StringItem index="2" value="&#x412;&#x44b;&#x441;&#x43e;&#x43a;&#x430;&#x44f;"/>
+                        <StringItem index="3" value="&#x41d;&#x438;&#x437;&#x43a;&#x430;&#x44f;"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x43e;&#x442; &#x443;&#x447;&#x430;&#x441;&#x442;&#x438;&#x44f; &#x432; &#x430;&#x43a;&#x446;&#x438;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Container class="javax.swing.JScrollPane" name="jScrollPane13">
+                  <AuxValues>
+                    <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+                  </AuxValues>
+
+                  <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+                  <SubComponents>
+                    <Component class="javax.swing.JTextArea" name="jTextArea13">
+                      <Properties>
+                        <Property name="columns" type="int" value="20"/>
+                        <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                          <Font name="Tahoma" size="10" style="0"/>
+                        </Property>
+                        <Property name="lineWrap" type="boolean" value="true"/>
+                        <Property name="rows" type="int" value="5"/>
+                        <Property name="text" type="java.lang.String" value="&#x41a;&#x443;&#x43f;&#x438; &#x43b;&#x44e;&#x431;&#x43e;&#x433;&#x43e; &#x442;&#x43e;&#x432;&#x430;&#x440;&#x430; &#x43d;&#x430; &#x441;&#x443;&#x43c;&#x43c;&#x443; 200 &#x442;.&#x440; &#x438; &#x43f;&#x43e;&#x43b;&#x443;&#x447;&#x438; &#x441;&#x435;&#x440;&#x442;&#x435;&#x444;&#x438;&#x43a;&#x430;&#x442; &#x41c;.&#x412;&#x438;&#x434;&#x435;&#x43e; &#x43d;&#x430; 1000 &#x440;&#x443;&#x431;"/>
+                        <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e;&#x43b;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44f; &#x43e;&#x431; &#x430;&#x43a;&#x446;&#x438;&#x438; &#x432; &#x43f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x43b;&#x44c;&#x43d;&#x43e;&#x43c; &#x432;&#x438;&#x434;&#x435;"/>
+                      </Properties>
+                    </Component>
+                  </SubComponents>
+                </Container>
+                <Component class="javax.swing.JTextField" name="jTextField38">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="50"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField43">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="1"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField44">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="0"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43a;&#x43e;&#x43b;&#x44c;&#x43a;&#x43e; &#x440;&#x430;&#x437; &#x43c;&#x43e;&#x436;&#x43d;&#x43e; &#x443;&#x447;&#x430;&#x432;&#x441;&#x442;&#x432;&#x43e;&#x432;&#x430;&#x442;&#x44c; (0 - &#x43d;&#x435;&#x43e;&#x433;&#x440;&#x430;&#x43d;&#x438;&#x447;&#x435;&#x43d;&#x43d;&#x43e;)"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton6">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c; &#x430;&#x43a;&#x446;&#x438;&#x44e;"/>
+                    <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                      <Insets value="[2, 4, 2, 4]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton5">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c; &#x430;&#x43a;&#x446;&#x438;&#x44e;"/>
+                    <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                      <Insets value="[2, 4, 2, 4]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton4">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="+"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x414;&#x43e;&#x431;&#x430;&#x432;&#x438;&#x442;&#x44c; &#x430;&#x43a;&#x446;&#x438;&#x44e; &#x432; &#x441;&#x43f;&#x438;&#x441;&#x43e;&#x43a;"/>
+                    <Property name="margin" type="java.awt.Insets" editor="org.netbeans.beaninfo.editors.InsetsEditor">
+                      <Insets value="[2, 4, 2, 4]"/>
+                    </Property>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox3">
+                  <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="&#x423;&#x432;&#x435;&#x434;&#x43e;&#x43c;&#x43b;&#x44f;&#x442;&#x44c; &#x43f;&#x440;&#x438; &#x437;&#x430;&#x43a;&#x430;&#x437;&#x430;&#x445;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel13">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x448;&#x435;&#x434;&#x448;&#x438;&#x435; &#x430;&#x43a;&#x446;&#x438;&#x438;:"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox10">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="5">
+                        <StringItem index="0" value="&#x423;&#x441;&#x43f;&#x435;&#x448;&#x43d;&#x44b;&#x435;"/>
+                        <StringItem index="1" value="87384 - 200&#x448;&#x442; - 1.05.2015 - 28.07.2015 - &#x43c;&#x43e;&#x43d;&#x43e;&#x431;&#x43b;&#x43e;&#x43a; &#x410;&#x441;&#x435;&#x440; 44325 - &#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x432;&#x44b;&#x441;&#x43e;&#x43a;&#x430;&#x44f; - 5 &#x440;&#x430;&#x437;"/>
+                        <StringItem index="2" value="Item 2"/>
+                        <StringItem index="3" value="Item 3"/>
+                        <StringItem index="4" value="Item 4"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x442;&#x430;&#x442;&#x438;&#x441;&#x442;&#x438;&#x43a;&#x430; &#x443;&#x441;&#x43f;&#x435;&#x448;&#x43d;&#x43e; &#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43d;&#x43d;&#x44b;&#x445; &#x430;&#x43a;&#x446;&#x438;&#x439;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JComboBox" name="jComboBox18">
+                  <Properties>
+                    <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                      <StringArray count="2">
+                        <StringItem index="0" value="&#x41d;&#x435;&#x443;&#x434;&#x430;&#x447;&#x430;"/>
+                        <StringItem index="1" value="Intel - 5 &#x43c;&#x43b;&#x43d; - 1.05.2015 - 28.07.2015 - &#x43f;&#x443;&#x442;&#x435;&#x432;&#x43a;&#x430; &#x43d;&#x430; &#x411;&#x430;&#x43b;&#x438; - &#x41f;&#x43e;&#x43b;&#x435;&#x437;&#x43d;&#x43e;&#x441;&#x442;&#x44c; &#x43d;&#x438;&#x437;&#x43a;&#x430;&#x44f; - &#x428;&#x430;&#x43d;&#x441; &#x443;&#x441;&#x43f;&#x435;&#x445;&#x430; 49% - 1 &#x440;&#x430;&#x437;"/>
+                      </StringArray>
+                    </Property>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x442;&#x430;&#x442;&#x438;&#x441;&#x442;&#x438;&#x43a;&#x430; &#x43d;&#x435;&#x437;&#x430;&#x432;&#x435;&#x440;&#x448;&#x435;&#x43d;&#x43d;&#x44b;&#x445; &#x430;&#x43a;&#x446;&#x438;&#x439;"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+            <Container class="javax.swing.JPanel" name="jPanel8">
+
+              <Layout>
+                <DimensionLayout dim="0">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jCheckBox4" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                          <Component id="jButton7" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField25" min="-2" pref="202" max="-2" attributes="0"/>
+                          <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                          <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField27" min="-2" pref="53" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jCheckBox5" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jTextField26" min="-2" pref="122" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+                <DimensionLayout dim="1">
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" attributes="0">
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="jTextField25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jButton7" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jTextField26" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel15" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                                  <Component id="jTextField27" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel14" alignment="3" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jCheckBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                </DimensionLayout>
+              </Layout>
+              <SubComponents>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox4">
+                  <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="&#x410;&#x432;&#x442;&#x43e;&#x437;&#x430;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x430;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x417;&#x430;&#x433;&#x440;&#x443;&#x436;&#x430;&#x442;&#x44c; &#x430;&#x432;&#x442;&#x43e;&#x43c;&#x430;&#x442;&#x438;&#x447;&#x435;&#x441;&#x43a;&#x438; &#x432; &#x437;&#x430;&#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x435; &#x432;&#x440;&#x435;&#x43c;&#x44f;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField25">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41c;&#x435;&#x441;&#x442;&#x43e;&#x43d;&#x430;&#x445;&#x43e;&#x436;&#x434;&#x435;&#x43d;&#x438;&#x435; &#x43e;&#x431;&#x449;&#x435;&#x433;&#x43e; &#x43f;&#x440;&#x430;&#x439;&#x441;&#x430; &#x434;&#x43b;&#x44f; &#x437;&#x430;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x438; &#x43f;&#x43e; &#x443;&#x43c;&#x43e;&#x43b;&#x447;&#x430;&#x43d;&#x438;&#x44e;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x41c;&#x435;&#x441;&#x442;&#x43e;&#x43d;&#x430;&#x445;&#x43e;&#x436;&#x434;&#x435;&#x43d;&#x438;&#x435; &#x43e;&#x431;&#x449;&#x435;&#x433;&#x43e; &#x43f;&#x440;&#x430;&#x439;&#x441;&#x430; &#x434;&#x43b;&#x44f; &#x437;&#x430;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x438; &#x43f;&#x43e; &#x443;&#x43c;&#x43e;&#x43b;&#x447;&#x430;&#x43d;&#x438;&#x44e;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField27">
+                  <Properties>
+                    <Property name="horizontalAlignment" type="int" value="0"/>
+                    <Property name="text" type="java.lang.String" value="11.00"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x417;&#x430;&#x434;&#x430;&#x442;&#x44c; &#x432;&#x440;&#x435;&#x43c;&#x44f; &#x437;&#x430;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x438;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel14">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x433;&#x440;&#x443;&#x436;&#x430;&#x442;&#x44c; &#x432;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x432;&#x440;&#x435;&#x43c;&#x44f; &#x437;&#x430;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x438; &#x43f;&#x440;&#x430;&#x439;&#x441; &#x43b;&#x438;&#x441;&#x442;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JLabel" name="jLabel15">
+                  <Properties>
+                    <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                      <Font name="Tahoma" size="11" style="1"/>
+                    </Property>
+                    <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+                      <Color blue="0" green="99" red="0" type="rgb"/>
+                    </Property>
+                    <Property name="text" type="java.lang.String" value="&#x423;&#x441;&#x43f;&#x435;&#x448;&#x43d;&#x43e;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x423;&#x441;&#x43f;&#x435;&#x448;&#x43d;&#x430;&#x44f;/&#x41d;&#x435;&#x443;&#x434;&#x430;&#x447;&#x43d;&#x430;&#x44f; &#x43f;&#x43e;&#x43f;&#x44b;&#x442;&#x43a;&#x430; &#x437;&#x430;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x438; &#x43f;&#x440;&#x430;&#x439;&#x441;-&#x43b;&#x438;&#x441;&#x442;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JCheckBox" name="jCheckBox5">
+                  <Properties>
+                    <Property name="selected" type="boolean" value="true"/>
+                    <Property name="text" type="java.lang.String" value="&#x422;&#x43e;&#x43b;&#x44c;&#x43a;&#x43e; &#x441;&#x432;&#x435;&#x436;&#x438;&#x439;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x415;&#x441;&#x43b;&#x438; &#x430;&#x43a;&#x442;&#x438;&#x432;&#x43d;&#x43e; &#x442;&#x43e; &#x437;&#x430;&#x433;&#x440;&#x443;&#x436;&#x430;&#x44e;&#x442;&#x441;&#x44f; &#x43f;&#x440;&#x430;&#x439;&#x441;&#x44b; &#x442;&#x43e;&#x43b;&#x44c;&#x43a;&#x43e; &#x442;&#x435;&#x43a;&#x443;&#x449;&#x435;&#x433;&#x43e; &#x434;&#x43d;&#x44f;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JButton" name="jButton7">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x417;&#x430;&#x433;&#x440;&#x443;&#x437;&#x438;&#x442;&#x44c;"/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x420;&#x443;&#x447;&#x43d;&#x430;&#x44f; &#x437;&#x430;&#x433;&#x440;&#x443;&#x437;&#x43a;&#x430; &#x43f;&#x440;&#x430;&#x439;&#x441; &#x43b;&#x438;&#x441;&#x442;&#x430;"/>
+                  </Properties>
+                </Component>
+                <Component class="javax.swing.JTextField" name="jTextField26">
+                  <Properties>
+                    <Property name="text" type="java.lang.String" value="&#x41a;&#x43b;&#x44e;&#x447;&#x435;&#x432;&#x43e;&#x435; &#x441;&#x43b;&#x43e;&#x432;&#x43e;..."/>
+                    <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x43e; &#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x43c;&#x443; &#x437;&#x43d;&#x430;&#x447;&#x435;&#x43d;&#x438;&#x44e; &#x438;&#x449;&#x435;&#x442;&#x441;&#x44f; &#x43f;&#x440;&#x430;&#x439;&#x441; &#x432; &#x43f;&#x430;&#x43f;&#x43a;&#x435;, &#x437;&#x43d;&#x430;&#x447;&#x435;&#x43d;&#x438;&#x435; &#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x43e; &#x431;&#x44b;&#x442;&#x44c; &#x443;&#x43d;&#x438;&#x43a;&#x430;&#x43b;&#x44c;&#x43d;&#x44b;&#x43c; &#x434;&#x43b;&#x44f; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430; &#x438; &#x43d;&#x435;&#x438;&#x437;&#x43c;&#x435;&#x43d;&#x43d;&#x44b;&#x43c;"/>
+                  </Properties>
+                </Component>
+              </SubComponents>
+            </Container>
+          </SubComponents>
+        </Container>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel2">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder roundedCorners="true"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jButton1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                  <Component id="jComboBox4" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                  <Component id="jTextField7" min="-2" pref="260" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Component id="jComboBox5" min="-2" pref="150" max="-2" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" attributes="0">
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="3" attributes="0">
+                      <Component id="jButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jTextField7" alignment="3" min="-2" max="-2" attributes="0"/>
+                      <Component id="jComboBox5" alignment="3" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JComboBox" name="jComboBox5">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="4">
+                <StringItem index="0" value="&#x412;&#x435;&#x437;&#x434;&#x435;"/>
+                <StringItem index="1" value="&#x41f;&#x43e;&#x43b;&#x435; 2"/>
+                <StringItem index="2" value="&#x41f;&#x43e;&#x43b;&#x435; 3"/>
+                <StringItem index="3" value="&#x41f;&#x43e;&#x43b;&#x435; 4"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&#x412;&#x44b;&#x431;&#x43e;&#x440; &#x43f;&#x43e;&#x43b;&#x44f;(&#x435;&#x439;) &#x434;&#x43b;&#x44f; &#x43f;&#x43e;&#x438;&#x441;&#x43a;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JLabel" name="jLabel1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="11" style="1"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x41f;&#x43e;&#x43a;&#x430;&#x437;&#x44b;&#x432;&#x430;&#x442;&#x44c;: "/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x41e;&#x442;&#x43e;&#x431;&#x440;&#x430;&#x436;&#x430;&#x442;&#x44c; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x43e;&#x432; &#x432;&#x44b;&#x431;&#x440;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x43c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField7">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" &#x41f;&#x43e;&#x438;&#x441;&#x43a; ..."/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x44e;&#x434;&#x430; &#x43f;&#x438;&#x448;&#x435;&#x43c; &#x442;&#x43e; &#x447;&#x442;&#x43e; &#x438;&#x449;&#x435;&#x43c;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JButton" name="jButton1">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Tahoma" size="11" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="0" red="0" type="rgb"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="&#x41f;&#x43b;&#x430;&#x43d;&#x435;&#x440;&#x43a;&#x430;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x435;&#x440;&#x435;&#x445;&#x43e;&#x434; &#x432; &#x43f;&#x43b;&#x430;&#x43d;&#x438;&#x440;&#x43e;&#x432;&#x449;&#x438;&#x43a; &#x43e;&#x43f;&#x43b;&#x430;&#x442;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox4">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="7">
+                <StringItem index="0" value="&#x412;&#x441;&#x435;&#x445;"/>
+                <StringItem index="1" value="&#x412;&#x430;&#x441;&#x44f;"/>
+                <StringItem index="2" value="&#x41f;&#x435;&#x442;&#x44f;"/>
+                <StringItem index="3" value="&#x41a;&#x43e;&#x43b;&#x44f;"/>
+                <StringItem index="4" value="&#x414;&#x430;&#x448;&#x430;"/>
+                <StringItem index="5" value="&#x41c;&#x430;&#x448;&#x430;"/>
+                <StringItem index="6" value="&#x414;&#x443;&#x43d;&#x44f;&#x448;&#x430;"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x43c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440;&#x43e;&#x432; &#x447;&#x44c;&#x438;&#x445; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x43e;&#x432; &#x43d;&#x443;&#x436;&#x43d;&#x43e; &#x43f;&#x43e;&#x43a;&#x430;&#x437;&#x430;&#x442;&#x44c;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[270, 20]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox4ActionPerformed"/>
+          </Events>
+        </Component>
+      </SubComponents>
+    </Container>
+    <Container class="javax.swing.JPanel" name="jPanel3">
+      <Properties>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.TitledBorderInfo">
+            <TitledBorder title="&#x411;&#x435;&#x441;&#x442; &#x414;&#x438;&#x434;&#x436;&#x438;&#x442;&#x430;&#x43b; &#x41f;&#x43b;&#x430;&#x437;&#x430; &#x41a;&#x43e;&#x440;&#x43f;&#x43e;&#x440;&#x435;&#x439;&#x448;&#x43d; - www.elko.ru"/>
+          </Border>
+        </Property>
+      </Properties>
+
+      <Layout>
+        <DimensionLayout dim="0">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jTextField9" min="-2" pref="266" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="jComboBox8" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Component id="jTextField8" min="-2" pref="80" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Component id="jTextField11" min="-2" pref="80" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
+                  <Component id="jTextField10" min="-2" pref="25" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jTextField12" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
+                  <Component id="jTextField13" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Component id="jComboBox7" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                  <Component id="jScrollPane3" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="jComboBox6" min="-2" pref="140" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+        <DimensionLayout dim="1">
+          <Group type="103" groupAlignment="0" attributes="0">
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="1" attributes="0">
+                      <Component id="jComboBox6" alignment="1" min="-2" max="-2" attributes="0"/>
+                      <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                          <Component id="jScrollPane3" alignment="1" min="-2" pref="20" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="jTextField9" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField8" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField11" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField10" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jComboBox7" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField12" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="jTextField13" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+              </Group>
+          </Group>
+        </DimensionLayout>
+      </Layout>
+      <SubComponents>
+        <Component class="javax.swing.JComboBox" name="jComboBox6">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="7">
+                <StringItem index="0" value="&#x411;&#x440;&#x435;&#x43d;&#x434; - &#x43c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440;&#x44b;"/>
+                <StringItem index="1" value="Sony - &#x421;&#x412;. &#x413;&#x42d;. &#x41a;&#x410;. &#x421;&#x412;. &#x41c;&#x41c;. &#x410;&#x414;. &#x41c;&#x410;. &#x411;&#x410;. &#x41a;&#x41d;. &#x41a;&#x410;. &#x413;&#x417;. &#x412;&#x414;"/>
+                <StringItem index="2" value="Panasonic - &#x428;&#x410;. &#x422;&#x421;. &#x413;&#x414;. &#x410;&#x414;. &#x41a;&#x41d;"/>
+                <StringItem index="3" value="Nikon - &#x41a;&#x410;. &#x410;&#x414;. &#x41c;&#x410;. &#x425;&#x410;"/>
+                <StringItem index="4" value="Transcend - &#x411;&#x410;. &#x41a;&#x41d;. &#x413;&#x417;. &#x412;&#x414;"/>
+                <StringItem index="5" value="Canon - &#x418;&#x41d;. &#x421;&#x412;. &#x41a;&#x410;. &#x410;&#x414;. &#x41c;&#x410;. &#x425;&#x410;"/>
+                <StringItem index="6" value="FujiFilm - &#x410;&#x414;. &#x41c;&#x410;"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x43c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440;&#x43e;&#x432; &#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x430; &#x438; &#x435;&#x433;&#x43e; &#x43a;&#x43e;&#x43d;&#x442;&#x430;&#x43a;&#x442;&#x44b;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[270, 20]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox6ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox7">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="12">
+                <StringItem index="0" value="&#x41c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440; &#x438; &#x43a;&#x43e;&#x43d;&#x442;&#x430;&#x43a;&#x442;"/>
+                <StringItem index="1" value="&#x410;&#x432;&#x433;&#x443;&#x441;&#x442; - post5@mail.ru"/>
+                <StringItem index="2" value="- 84957750679 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="3" value="&#x410;&#x432;&#x433;&#x443;&#x441;&#x442;&#x430; - post6@mail.ru"/>
+                <StringItem index="4" value="- 84957750680 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="5" value="&#x410;&#x432;&#x434;&#x435;&#x439; - post7@mail.ru"/>
+                <StringItem index="6" value="- 84957750681 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="7" value="&#x410;&#x432;&#x440;&#x430;&#x430;&#x43c; - post8@mail.ru"/>
+                <StringItem index="8" value="- 84957750682 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="9" value="&#x410;&#x432;&#x440;&#x43e;&#x440;&#x430; - post9@mail.ru"/>
+                <StringItem index="10" value="- 84957750683 &#x43f;&#x43e;&#x437;&#x432;&#x43e;&#x43d;&#x438;&#x442;&#x44c;"/>
+                <StringItem index="11" value=""/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43f;&#x438;&#x441;&#x43e;&#x43a; &#x43c;&#x435;&#x43d;&#x435;&#x434;&#x436;&#x435;&#x440;&#x43e;&#x432; &#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x430; &#x438; &#x435;&#x433;&#x43e; &#x43a;&#x43e;&#x43d;&#x442;&#x430;&#x43a;&#x442;&#x44b;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[270, 20]"/>
+            </Property>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBox7ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JComboBox" name="jComboBox8">
+          <Properties>
+            <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+              <StringArray count="5">
+                <StringItem index="0" value="&#x41f;&#x43e;&#x441;&#x43b;&#x435;&#x434;&#x43d;&#x438;&#x435; &#x43d;&#x430;&#x43a;&#x43b;&#x430;&#x434;&#x43d;&#x44b;&#x435;"/>
+                <StringItem index="1" value="&#x432;&#x43e;&#x437;&#x432;&#x440;&#x430;&#x449;&#x435;&#x43d;&#x438;&#x435; &#x442;&#x43e;&#x432;&#x430;&#x440;&#x430; - 22.04"/>
+                <StringItem index="2" value="&#x410;999/i08483/07 - 15.04"/>
+                <StringItem index="3" value="&#x41f;&#x440;&#x435;&#x434;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x430; - 10.04"/>
+                <StringItem index="4" value="&#x41c;&#x43c;&#x420;&#x41a;0000126 - 28.03"/>
+              </StringArray>
+            </Property>
+            <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x441;&#x43c;&#x43e;&#x442;&#x440; &#x43d;&#x430;&#x43a;&#x43b;&#x430;&#x434;&#x43d;&#x44b;&#x445; &#x434;&#x430;&#x43d;&#x43d;&#x43e;&#x433;&#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+            <Property name="maximumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[270, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Container class="javax.swing.JScrollPane" name="jScrollPane3">
+          <Properties>
+            <Property name="horizontalScrollBarPolicy" type="int" value="31"/>
+          </Properties>
+          <AuxValues>
+            <AuxValue name="autoScrollPane" type="java.lang.Boolean" value="true"/>
+          </AuxValues>
+
+          <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
+          <SubComponents>
+            <Component class="javax.swing.JTextArea" name="jTextArea3">
+              <Properties>
+                <Property name="columns" type="int" value="20"/>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="12" style="0"/>
+                </Property>
+                <Property name="rows" type="int" value="5"/>
+                <Property name="text" type="java.lang.String" value="&#x414;&#x43e;&#x43f;&#x43e;&#x43b;&#x43d;&#x438;&#x442;&#x435;&#x43b;&#x44c;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x430; &#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x435;"/>
+                <Property name="toolTipText" type="java.lang.String" value="&#x41f;&#x440;&#x43e;&#x438;&#x437;&#x432;&#x43e;&#x43b;&#x44c;&#x43d;&#x430;&#x44f; &#x438;&#x43d;&#x444;&#x43e;&#x440;&#x43c;&#x430;&#x446;&#x438;&#x44f; &#x43e; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x435;"/>
+              </Properties>
+            </Component>
+          </SubComponents>
+        </Container>
+        <Component class="javax.swing.JTextField" name="jTextField8">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" USD"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x412;&#x430;&#x43b;&#x44e;&#x442;&#x43d;&#x44b;&#x439; &#x434;&#x43e;&#x43b;&#x433;. + &#x434;&#x43e;&#x43b;&#x433; = &#x43c;&#x44b; &#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x44b; &#x434;&#x435;&#x43d;&#x435;&#x433; &#x43f;&#x43e;&#x441;&#x442;&#x443;, - &#x434;&#x43e;&#x43b;&#x433; = &#x43f;&#x43e;&#x441;&#x442; &#x43d;&#x430;&#x43c; &#x434;&#x43e;&#x43b;&#x436;&#x435;&#x43d;(&#x43d;&#x430;&#x43f;&#x440;&#x43c;&#x435;&#x440; &#x437;&#x430; &#x43f;&#x440;&#x435;&#x434;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x44b; &#x438;&#x43b;&#x438; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField9">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="&#x411;&#x435;&#x441;&#x442; &#x414;&#x438;&#x434;&#x436;&#x438;&#x442;&#x430;&#x43b; &#x41f;&#x43b;&#x430;&#x437;&#x430; &#x41a;&#x43e;&#x440;&#x43f;&#x43e;&#x440;&#x435;&#x439;&#x448;&#x43d; &#x434;&#x43b;&#x44f; &#x440;&#x438;&#x431;&#x435;&#x439;&#x442;&#x430;"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x41d;&#x430;&#x437;&#x432;&#x430;&#x43d;&#x438;&#x435; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;, &#x43d;&#x430;&#x436;&#x43c;&#x438;&#x442;&#x435; &#x434;&#x43b;&#x44f; &#x434;&#x435;&#x442;&#x430;&#x43b;&#x44c;&#x43d;&#x43e;&#x439; &#x43d;&#x430;&#x441;&#x442;&#x440;&#x43e;&#x439;&#x43a;&#x438; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+            <Property name="minimumSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
+              <Dimension value="[150, 20]"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField10">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="180"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x440;&#x43e;&#x43a; &#x43e;&#x442;&#x441;&#x440;&#x43e;&#x447;&#x43a;&#x438; - &#x434;&#x43d;&#x435;&#x439;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField11">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" RUB"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x420;&#x443;&#x431;&#x43b;&#x435;&#x432;&#x44b;&#x439; &#x434;&#x43e;&#x43b;&#x433;. + &#x434;&#x43e;&#x43b;&#x433; = &#x43c;&#x44b; &#x434;&#x43e;&#x43b;&#x436;&#x43d;&#x44b; &#x434;&#x435;&#x43d;&#x435;&#x433; &#x43f;&#x43e;&#x441;&#x442;&#x443;, - &#x434;&#x43e;&#x43b;&#x433; = &#x43f;&#x43e;&#x441;&#x442; &#x43d;&#x430;&#x43c; &#x434;&#x43e;&#x43b;&#x436;&#x435;&#x43d;(&#x43d;&#x430;&#x43f;&#x440;&#x43c;&#x435;&#x440; &#x437;&#x430; &#x43f;&#x440;&#x435;&#x434;&#x43e;&#x43f;&#x43b;&#x430;&#x442;&#x44b; &#x438;&#x43b;&#x438; &#x441;&#x435;&#x440;&#x432;&#x438;&#x441;)"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField12">
+          <Properties>
+            <Property name="text" type="java.lang.String" value=" 7.7%"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x421;&#x43a;&#x438;&#x434;&#x43a;&#x430; &#x43e;&#x442; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JTextField" name="jTextField13">
+          <Properties>
+            <Property name="text" type="java.lang.String" value="2%"/>
+            <Property name="toolTipText" type="java.lang.String" value="&#x420;&#x438;&#x431;&#x435;&#x439;&#x442; &#x43f;&#x43e;&#x441;&#x442;&#x430;&#x432;&#x449;&#x438;&#x43a;&#x430;"/>
+          </Properties>
+        </Component>
+      </SubComponents>
+    </Container>
+  </SubComponents>
+</Form>
