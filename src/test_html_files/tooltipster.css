@@ -1,0 +1,156 @@
+.tooltipster-default {
+	BORDER-BOTTOM: rgb(0,0,0) 2px solid; BORDER-LEFT: rgb(0,0,0) 2px solid; BACKGROUND-COLOR: rgb(76,76,76); COLOR: rgb(255,255,255); BORDER-TOP: rgb(0,0,0) 2px solid; BORDER-RIGHT: rgb(0,0,0) 2px solid; border-top-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-bottom-left-radius: 5px
+}
+.tooltipster-default .tooltipster-content {
+	PADDING-BOTTOM: 8px; LINE-HEIGHT: 16px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; FONT-FAMILY: Arial, sans-serif; FONT-SIZE: 14px; OVERFLOW: hidden; PADDING-TOP: 8px
+}
+.tooltipster-default .tooltipster-arrow .tooltipster-arrow-border {
+	
+}
+.tooltipster-icon {
+	MARGIN-LEFT: 4px; CURSOR: help
+}
+.tooltipster-base {
+	Z-INDEX: 9999999; POSITION: absolute; PADDING-BOTTOM: 0px; LINE-HEIGHT: 0; PADDING-LEFT: 0px; WIDTH: auto; PADDING-RIGHT: 0px; FONT-SIZE: 0px; OVERFLOW: visible; PADDING-TOP: 0px; TOP: 0px; LEFT: 0px; pointer-events: none
+}
+.tooltipster-base .tooltipster-content {
+	OVERFLOW: hidden
+}
+.tooltipster-arrow {
+	Z-INDEX: -1; POSITION: absolute; TEXT-ALIGN: center; WIDTH: 100%; DISPLAY: block; HEIGHT: 100%; TOP: 0px; LEFT: 0px
+}
+.tooltipster-arrow SPAN {
+	POSITION: absolute; WIDTH: 0px; DISPLAY: block; HEIGHT: 0px
+}
+.tooltipster-arrow-border {
+	POSITION: absolute; WIDTH: 0px; DISPLAY: block; HEIGHT: 0px
+}
+.tooltipster-arrow-top SPAN {
+	BORDER-LEFT: transparent 8px solid; BOTTOM: -7px; BORDER-TOP: 8px solid; BORDER-RIGHT: transparent 8px solid
+}
+.tooltipster-arrow-top-right SPAN {
+	BORDER-LEFT: transparent 8px solid; BOTTOM: -7px; BORDER-TOP: 8px solid; BORDER-RIGHT: transparent 8px solid
+}
+.tooltipster-arrow-top-left SPAN {
+	BORDER-LEFT: transparent 8px solid; BOTTOM: -7px; BORDER-TOP: 8px solid; BORDER-RIGHT: transparent 8px solid
+}
+.tooltipster-arrow-top .tooltipster-arrow-border {
+	BORDER-LEFT: transparent 9px solid; BOTTOM: -7px; BORDER-TOP: 9px solid; BORDER-RIGHT: transparent 9px solid
+}
+.tooltipster-arrow-top-right .tooltipster-arrow-border {
+	BORDER-LEFT: transparent 9px solid; BOTTOM: -7px; BORDER-TOP: 9px solid; BORDER-RIGHT: transparent 9px solid
+}
+.tooltipster-arrow-top-left .tooltipster-arrow-border {
+	BORDER-LEFT: transparent 9px solid; BOTTOM: -7px; BORDER-TOP: 9px solid; BORDER-RIGHT: transparent 9px solid
+}
+.tooltipster-arrow-bottom SPAN {
+	BORDER-BOTTOM: 8px solid; BORDER-LEFT: transparent 8px solid; BORDER-RIGHT: transparent 8px solid; TOP: -7px
+}
+.tooltipster-arrow-bottom-right SPAN {
+	BORDER-BOTTOM: 8px solid; BORDER-LEFT: transparent 8px solid; BORDER-RIGHT: transparent 8px solid; TOP: -7px
+}
+.tooltipster-arrow-bottom-left SPAN {
+	BORDER-BOTTOM: 8px solid; BORDER-LEFT: transparent 8px solid; BORDER-RIGHT: transparent 8px solid; TOP: -7px
+}
+.tooltipster-arrow-bottom .tooltipster-arrow-border {
+	BORDER-BOTTOM: 9px solid; BORDER-LEFT: transparent 9px solid; BORDER-RIGHT: transparent 9px solid; TOP: -7px
+}
+.tooltipster-arrow-bottom-right .tooltipster-arrow-border {
+	BORDER-BOTTOM: 9px solid; BORDER-LEFT: transparent 9px solid; BORDER-RIGHT: transparent 9px solid; TOP: -7px
+}
+.tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+	BORDER-BOTTOM: 9px solid; BORDER-LEFT: transparent 9px solid; BORDER-RIGHT: transparent 9px solid; TOP: -7px
+}
+.tooltipster-arrow-top SPAN {
+	MARGIN: 0px auto; RIGHT: 0px; LEFT: 0px
+}
+.tooltipster-arrow-top .tooltipster-arrow-border {
+	MARGIN: 0px auto; RIGHT: 0px; LEFT: 0px
+}
+.tooltipster-arrow-bottom SPAN {
+	MARGIN: 0px auto; RIGHT: 0px; LEFT: 0px
+}
+.tooltipster-arrow-bottom .tooltipster-arrow-border {
+	MARGIN: 0px auto; RIGHT: 0px; LEFT: 0px
+}
+.tooltipster-arrow-top-left SPAN {
+	LEFT: 6px
+}
+.tooltipster-arrow-bottom-left SPAN {
+	LEFT: 6px
+}
+.tooltipster-arrow-top-left .tooltipster-arrow-border {
+	LEFT: 5px
+}
+.tooltipster-arrow-bottom-left .tooltipster-arrow-border {
+	LEFT: 5px
+}
+.tooltipster-arrow-top-right SPAN {
+	RIGHT: 6px
+}
+.tooltipster-arrow-bottom-right SPAN {
+	RIGHT: 6px
+}
+.tooltipster-arrow-top-right .tooltipster-arrow-border {
+	RIGHT: 5px
+}
+.tooltipster-arrow-bottom-right .tooltipster-arrow-border {
+	RIGHT: 5px
+}
+.tooltipster-arrow-left SPAN {
+	BORDER-BOTTOM: transparent 8px solid; BORDER-LEFT: 8px solid; MARGIN-TOP: -7px; BORDER-TOP: transparent 8px solid; RIGHT: -7px; TOP: 50%
+}
+.tooltipster-arrow-left .tooltipster-arrow-border {
+	BORDER-BOTTOM: transparent 8px solid; BORDER-LEFT: 8px solid; MARGIN-TOP: -7px; BORDER-TOP: transparent 8px solid; RIGHT: -7px; TOP: 50%
+}
+.tooltipster-arrow-left .tooltipster-arrow-border {
+	BORDER-BOTTOM: transparent 9px solid; BORDER-LEFT: 9px solid; MARGIN-TOP: -8px; BORDER-TOP: transparent 9px solid
+}
+.tooltipster-arrow-right SPAN {
+	BORDER-BOTTOM: transparent 8px solid; MARGIN-TOP: -7px; BORDER-TOP: transparent 8px solid; BORDER-RIGHT: 8px solid; TOP: 50%; LEFT: -7px
+}
+.tooltipster-arrow-right .tooltipster-arrow-border {
+	BORDER-BOTTOM: transparent 8px solid; MARGIN-TOP: -7px; BORDER-TOP: transparent 8px solid; BORDER-RIGHT: 8px solid; TOP: 50%; LEFT: -7px
+}
+.tooltipster-arrow-right .tooltipster-arrow-border {
+	BORDER-BOTTOM: transparent 9px solid; MARGIN-TOP: -8px; BORDER-TOP: transparent 9px solid; BORDER-RIGHT: 9px solid
+}
+.tooltipster-fade {
+	opacity: 0; transition: opacity; -webkit-transition: opacity
+}
+.tooltipster-fade-show {
+	opacity: 1
+}
+.tooltipster-grow {
+	transition: -webkit-transform; -webkit-transition: -webkit-transform; -webkit-transform: scale(0, 0); -webkit-backface-visibility: hidden
+}
+.tooltipster-grow-show {
+	transition: cubic-bezier(0.175, 0.885, 0.32, 1.15); -webkit-transition: cubic-bezier(0.175, 0.885, 0.32, 1.15); -webkit-transform: scale(1, 1)
+}
+.tooltipster-swing {
+	opacity: 0; transition: -webkit-transform, opacity; -webkit-transition: -webkit-transform, opacity; -webkit-transform: rotateZ(4deg)
+}
+.tooltipster-swing-show {
+	opacity: 1; transition: cubic-bezier(0.23, 0.635, 0.495, 2.4); -webkit-transition: cubic-bezier(0.23, 0.635, 0.495, 2.4); -webkit-transform: rotateZ(0deg)
+}
+.tooltipster-fall {
+	TOP: 0px; transition: top cubic-bezier(0.175, 0.885, 0.32, 1.15); -webkit-transition: top cubic-bezier(0.175, 0.885, 0.32, 1.15)
+}
+.tooltipster-fall-show {
+	
+}
+.tooltipster-dying {
+	TOP: 0px !important; opacity: 0; transition: all; -webkit-transition: all
+}
+.tooltipster-slide {
+	LEFT: -40px; transition: left cubic-bezier(0.175, 0.885, 0.32, 1.15); -webkit-transition: left cubic-bezier(0.175, 0.885, 0.32, 1.15)
+}
+.tooltipster-slide-show {
+	
+}
+.tooltipster-dying {
+	LEFT: 0px !important; opacity: 0; transition: all; -webkit-transition: all
+}
+.tooltipster-content-changing {
+	opacity: 0.5; -webkit-transform: scale(1.1, 1.1)
+}
