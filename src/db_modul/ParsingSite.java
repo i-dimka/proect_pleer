@@ -2,9 +2,16 @@ package db_modul;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.URL;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.print.DocFlavor;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -16,62 +23,125 @@ import org.jsoup.select.Elements;
  * @author Дима
  */
 public class ParsingSite {
+    private static URL url_node;
+    private static Elements treeByTag;
+    private static Document page;
+    private static Elements path_in_catalog;
+    private static String idCatalog;
+    private static String name_catalog;
+    private static String idParentCatalog;
+    private static DbWorker db;
+    private static AuthSite authSite;
     
+    public ParsingSite(){
+        authSite = new AuthSite("dima", "1234");
+    }
     
-    public static void main(String args[]){
+    public static void startParsing(){
+        db = new DbWorker(); 
         try {
             /**
              * Открытие страницы или файла для парсинга
              */
-            Document doc = Jsoup.parse(new File("D:\\Работа\\Проект\\Товары2\\src\\test_html.htm"), "windows-1251");
+            Document main_page = Jsoup.parse(new File("D:\\Работа\\Проект\\Товары2\\src\\test_html.htm"), "windows-1251");
+            /*url_node = new URL("http://www.pleer.ru/");
+            Document doc = Jsoup.parse(url_node,500);*/            
                         
-            System.out.println(doc.title());
+            System.out.println(main_page.title());
             
-            /**
-             * Вытаскиваем из HTML файла все строки из основной таблицы
-             */
-            Elements elemntsByTag = doc.getElementsByClass("medium").select("tr");
+            /*
+            Получение ссылок для обработки каталога
+            */
+            treeByTag = main_page.getElementsByClass("text").select("td").get(1).getElementsByAttribute("href");
+            treeByTag.remove(0);            
             
+            for(Element node : treeByTag){
+                url_node = new URL(node.attr("href"));
+                page = Jsoup.parse(url_node, 1500);
+                
+                //ДОБАВИТЬ ПРОВЕРКУ НА СУЩЕСТВОВАНИЕ ТАБЛИЦЫ ТОВАРА!!!
+                page = main_page;
+                /*
+                Получение кода, имени каталога, места в нем 
+                */
+                path_in_catalog = page.getElementsByClass("text").select("table").get(2).getElementsByTag("a");
+                name_catalog = path_in_catalog.get(path_in_catalog.size()-1).text();
+                idCatalog = path_in_catalog.get(path_in_catalog.size()-1).attr("href");
+                idCatalog = idCatalog.substring(idCatalog.indexOf("edit=") + 5, idCatalog.indexOf('&', idCatalog.indexOf("edit=")));
+            
+                idParentCatalog = path_in_catalog.get(path_in_catalog.size()-2).attr("href");
+                idParentCatalog = idParentCatalog.substring(idParentCatalog.indexOf("edit=") + 5, idParentCatalog.indexOf('&', idParentCatalog.indexOf("edit=")));
+                
+                insertNodeCatalog(idCatalog, idParentCatalog, name_catalog);
+                
+                /*
+                Парсинг списка товаров
+                */
+                parseTable(page.getElementsByClass("medium").select("tr"));
+                break;
+            }    
+        } catch (IOException ex) {
+            Logger.getLogger(ParsingSite.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+    }
+    
+    /**
+    * Вытаскиваем все строки из основной таблицы с товаром
+    **/    
+    private static int parseTable(Elements rowsByTag){
+            //Поля для таблицы Products
             String idProduct;
             String history2_link;
             String bonus_reiting;//int
             String name_product;
             String garant;
-            String provider;
-            String price_last_custom;//int
-            String date_last_custom;
             String url_product;
             String url_yamarket;
             String current_count;//int
-            String date_korrect_price;
-            String prev_custom_correct_price;
-            String url_conkurent;
             int cnt_in_order;
             int cnt_in_courier;
             int cnt_in_opt_order;
             int cnt_in_mag_order;
             int cnt_in_return;
             int cnt_in_reserve;
+            String url_conkurent;
+            
+            String provider;//Поставщик - пока не нужен     
+            
+            String prev_custom_correct_price;//дата и автор последнего прихода          
+            
+            String price_last_custom;//тбл Состав прихода - Входная цена
+            String date_last_custom;// Дата прихода
+            
+            //Статистика продаж должна вычисляться из таблиц продажи и состав продажи
             int sales7day;
             int sales14day;
             int optsales7day;
             int optsales14day;
-            int input_price;
-            int price_product;
-            int rrc;
-            int preview_price;
-            int price_in_mag;
-            int price_dostavka;
+            
+            int input_price;//последняя входна цена. ??Почему отличается от цены последней поставки??
+            
+            int price_product;//текущая цена
+            int rrc;//цена ррц
+            int preview_price;//предыдущая цена - вычисляется
+            int price_in_mag;//цена в магазине
+            int price_dostavka;//цена за доставку
+            String date_korrect_price;//дата изменения цены, автор
+            
             
             int i;
+            int count_rows = 0;
             
             /**
              * Перебор строк в цикле
              */            
-            for(Element element : elemntsByTag){
+            for(Element element : rowsByTag){
                 
                 idProduct = element.getElementsByTag("td").get(0).select("a").attr("name");//Код товара
                 if(!idProduct.isEmpty()){
+                    count_rows++; //подсчет обработанных строк таблицы
+                    
                     history2_link = element.getElementsByTag("td").get(0)
                             .select("span").get(1).attr("onclick");//ист2 - необходимо обрезать лишние символы 
                     
@@ -176,11 +246,18 @@ public class ParsingSite {
                     date_korrect_price = element.getElementsByTag("td").get(8)
                                     .getElementById("rubprice_" + idProduct).attr("title");//дата изменения цены, автор
                     
+            insertRowReestrPrice("Текущая цена", price_product, 
+                            getDateInCorrectString(date_korrect_price), idProduct, 
+                            getAutorInCorrectString(date_korrect_price));
+                    
                     preview_price = Integer.parseInt(element.getElementsByTag("td").get(8)
                                     .getElementsByTag("div").get(1).text());//предыдущая цена
                     
                     prev_custom_correct_price = element.getElementsByTag("td").get(8)
                                     .getElementsByTag("div").get(1).attr("title");//дата и автор прихода и назнчения цены
+                    
+            insertRowReestrPrice("Предыдущая цена", preview_price, getDateInCorrectString(prev_custom_correct_price), idProduct, 
+                            getAutorInCorrectString(prev_custom_correct_price));
                     
                     url_conkurent = element.getElementsByTag("td").get(8).getElementsByAttribute("target").get(0).attr("href");
                             
@@ -188,15 +265,84 @@ public class ParsingSite {
                             element.getElementsByTag("td").get(9).text());//цена в магазине
                     
                     price_dostavka = Integer.parseInt(
-                            element.getElementsByTag("td").get(10).text());//цена за доставку                    
+                            element.getElementsByTag("td").get(10).text());//цена за доставку  
+                    
+                    System.out.println(name_product);
+            insertRowProduct(idProduct, history2_link, bonus_reiting, 
+                                    name_product, garant, url_product, 
+                                    url_yamarket, current_count, cnt_in_order, 
+                                    cnt_in_courier, cnt_in_opt_order, cnt_in_mag_order, 
+                                    cnt_in_return, cnt_in_reserve, Integer.parseInt(idCatalog), 0, url_conkurent);
+                    
                     
                 }
             }
-            
-            
-        } catch (IOException ex) {
-            Logger.getLogger(ParsingSite.class.getName()).log(Level.SEVERE, null, ex);
-        }
+            return count_rows;
+    }
+    
+    /**
+     * Добавление узла каталога в БД
+     * 
+     * @param idCatalog
+     * @param idParentCatalog
+     * @param name 
+     */
+    private static void insertNodeCatalog(String idCatalog, String idParentCatalog, String name){
+        db.insertRowCatalog(Integer.parseInt(idCatalog), Integer.parseInt(idParentCatalog), name);
+    }
+    
+    /**
+     * Добавление строки товара в БД
+     * 
+     * @param idProduct
+     * @param history2_link
+     * @param bonus_reiting
+     * @param name_product
+     * @param garant
+     * @param url_product
+     * @param url_yamarket
+     * @param current_count
+     * @param cnt_in_order
+     * @param cnt_in_courier
+     * @param cnt_in_opt_order
+     * @param cnt_in_mag_order
+     * @param cnt_in_return
+     * @param cnt_in_reserve
+     * @param idCatalog
+     * @param idBrend 
+     */
+    private static void insertRowProduct(String idProduct, String history2_link, String bonus_reiting, 
+                                         String name_product, String garant, String url_product,
+                                        String url_yamarket, String current_count, int cnt_in_order,
+                                        int cnt_in_courier, int cnt_in_opt_order, int cnt_in_mag_order, 
+                                        int cnt_in_return, int cnt_in_reserve, int idCatalog, int idBrend, String url_conkurent){
         
+        db.insertRowProduct(idProduct, history2_link, bonus_reiting, 
+                name_product, garant, url_product, 
+                url_yamarket, current_count, cnt_in_order, 
+                cnt_in_courier, cnt_in_opt_order, cnt_in_mag_order, 
+                cnt_in_return, cnt_in_reserve, idCatalog, idBrend, url_conkurent);
+    }
+    
+    private static void insertRowReestrPrice(String name, double valuePrice, String datetime, String idProduct, String autor){
+         SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+         try{
+             Date date;
+             if(datetime.equals(""))date = new Date();
+             else date = formatter.parse(datetime);
+             db.insertRowReestrPrice(name, valuePrice, date, idProduct, autor);
+         }catch(ParseException e){
+             e.printStackTrace();
+         }
+    }
+    
+    private static String getDateInCorrectString(String str){
+        if(str.length() < 20) return "";
+        return str.substring(0, 20);
+    }
+    
+    private static String getAutorInCorrectString(String str){
+        if(str.length() < 20) return "";
+        return str.substring(str.indexOf("р.") + 3);
     }
 }
