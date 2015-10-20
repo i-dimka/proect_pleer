@@ -1761,39 +1761,8 @@ public class GUI_Products extends javax.swing.JPanel {
         this.productArrayList = productArrayList;
         createPanelRows();
         this.add(createPanelRows());
-    }
+    }   
     
-    /*public class FocusChangeListener implements FocusListener{
-
-        @Override
-        public void focusGained(FocusEvent e) {
-        }
-
-        @Override
-        public void focusLost(FocusEvent e) {
-            StringBuilder builder = new StringBuilder(((JTextField)e.getSource()).getName());
-            String idPr = builder.substring(builder.indexOf("_") + 1);
-            String nameElement = builder.substring(0, builder.indexOf("_"));
-            if(nameElement.equals("rubprice")){
-                builder.delete(0, builder.length());
-                builder.append("pid=");
-                builder.append(idPr);
-                builder.append("&oldPrice=");
-                builder.append("");
-                builder.append("&newPrice=");
-                builder.append(((JTextField)e.getSource()).getText());
-                builder.append("&groupChange=0&ajax=1");
-                    
-                try {
-                    ParsingSite.getAuthSite().sendPost("http://monitor.pleer.ru/monitor/classes/product/ajax.php", builder.toString());
-                } catch (ProtocolException ex) {
-                    Logger.getLogger(GUI_Products.class.getName()).log(Level.SEVERE, null, ex);
-                } catch (IOException ex) {
-                    Logger.getLogger(GUI_Products.class.getName()).log(Level.SEVERE, null, ex);
-                }
-            }
-        }
-    }*/
     
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton13;
