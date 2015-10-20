@@ -2,15 +2,19 @@ package db_modul;
 
 import com.mysql.fabric.jdbc.FabricMySQLDriver;
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.Driver;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.sql.Timestamp;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import products_modul.CatalogNode;
 import products_modul.Product;
 
 /**
@@ -19,9 +23,9 @@ import products_modul.Product;
  */
 public class DbWorker {
     
-    private static final String URL = "jdbc:mysql://localhost:3306/db_temp";
+    private static final String URL = "jdbc:mysql://localhost:3306/test_db";
     private static final String USERNAME = "root";
-    private static final String PASSWORD = "root";
+    private static final String PASSWORD = "1234";
     
     
     private static final String COLUMN_ID_PRODUCT = "id_product";
@@ -50,6 +54,15 @@ public class DbWorker {
     private static final String COLUMN_IN_COURIER_CNT = "in_courier_cnt";
     private static final String COLUMN_IN_OPT_ORDER_CNT = "in_opt_order_cnt";
     private static final String COLUMN_IN_MAG_ORDER_CNT = "in_mag_order_cnt";
+    private static final String COLUMN_IN_RETURN = "in_return_cnt";
+    private static final String COLUMN_IN_REZERVE = "in_rezerve_cnt";
+    private static final String COLUMN_HISTORY_LINK = "history_link";
+    private static final String COLUMN_BONUS_REITING = "bonus";
+    private static final String COLUMN_GARANT = "garant";
+    private static final String COLUMN_URL_IN_MAG = "url_product";
+    private static final String COLUMN_URL_YANDEX = "url_ym";
+    private static final String COLUMN_CURRENT_COUNT = "sklad";
+    private static final String COLUMN_URL_CONCURENT = "url_concurent";
     
     private static final String CREATE_TABLE_PRODUCTS = "CREATE TABLE IF NOT EXISTS " + TABLE_PRODUCTS +
             "( " + COLUMN_ID_PRODUCT + " int(10) NOT NULL PRIMARY KEY, " +
@@ -59,18 +72,31 @@ public class DbWorker {
             COLUMN_IN_OPT_ORDER_CNT + " int(10), " +
             COLUMN_IN_MAG_ORDER_CNT + " int(10), " +
             COLUMN_ID_CATALOG + " int(10), " +
-            COLUMN_ID_BREND + " int(10))";
+            COLUMN_ID_BREND + " int(10), " +
+            COLUMN_IN_RETURN + " int(10), " +
+            COLUMN_IN_REZERVE + " int(10), " +
+            COLUMN_HISTORY_LINK + " varchar(255), " +
+            COLUMN_BONUS_REITING + " int(10), " +
+            COLUMN_GARANT + " varchar(255), " +
+            COLUMN_URL_IN_MAG + " varchar(255), " +
+            COLUMN_URL_YANDEX + " text, " +
+            COLUMN_CURRENT_COUNT + " int(10)," +
+            COLUMN_URL_CONCURENT + " varchar(255))";
     
     
     private static final String TABLE_REESTR_PRICES = "tbl_reestr_prices";
     private static final String COLUMN_NAME_PRICE = "name";
     private static final String COLUMN_DATE_UPDATE_PRICE = "updated";
+    private static final String COLUMN_VALUE_PRICE = "value";
+    private static final String COLUMN_AUTOR_UPDATE = "autor";
     
     private static final String CREATE_TABLE_REESTR_PRICES = "CREATE TABLE IF NOT EXISTS " + TABLE_REESTR_PRICES +
             "( " + COLUMN_ID_REESTR_PRICE + " int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT, " +
             COLUMN_NAME_PRICE + " varchar(255), " + 
             COLUMN_ID_PRODUCT + " int(10), " +
-            COLUMN_DATE_UPDATE_PRICE + " datetime)";
+            COLUMN_DATE_UPDATE_PRICE + " datetime, " +
+            COLUMN_VALUE_PRICE + " real, " +
+            COLUMN_AUTOR_UPDATE + " text)";
     
     
     private static final String TABLE_BRENDS = "tbl_brends";
@@ -82,13 +108,17 @@ public class DbWorker {
     
     
     private static final String TABLE_CATALOGS = "tbl_catalogs";
-    private static final String COLUMN_PARENT = "parent";
+    private static final String COLUMN_CATALOG_PARENT = "parent";
     private static final String COLUMN_CATALOG_NAME = "name";
+    private static final String COLUMN_CATALOG_ID_IN_MAG = "id_in_magazine";
+    private static final String COLUMN_CATALOG_HREF = "href";
     
     private static final String CREATE_TABLE_CATALOGS = "CREATE TABLE IF NOT EXISTS " + TABLE_CATALOGS +
             "( " + COLUMN_ID_CATALOG + " int(10) NOT NULL PRIMARY KEY AUTO_INCREMENT, " +
-            COLUMN_PARENT + " int(10), " + 
-            COLUMN_CATALOG_NAME + " varchar(255))";
+            COLUMN_CATALOG_PARENT + " int(10), " +
+            COLUMN_CATALOG_ID_IN_MAG + " int(10)," +
+            COLUMN_CATALOG_NAME + " varchar(255), " +
+            COLUMN_CATALOG_HREF + " varchar(255))";
     
     
     private static final String TABLE_HISTORY = "tbl_history";
@@ -220,9 +250,11 @@ public class DbWorker {
     
     private static Connection connection;
     
-    public DbWorker(){
+    public DbWorker(boolean isConnect){
+        if(!isConnect){
         this.dbConnect();
         this.createDB();
+        }
     }
     
     /**
@@ -297,14 +329,24 @@ public class DbWorker {
             productArrayList = new ArrayList<Product>();
             if(res.first()){
                 do{
-                    productArrayList.add(new Product(res.getInt(COLUMN_ID_PRODUCT), 
+                    /*productArrayList.add(new Product(res.getInt(COLUMN_ID_PRODUCT), 
                             res.getInt(COLUMN_ID_CATALOG), 
                             res.getInt(COLUMN_ID_BREND), 
                             res.getInt(COLUMN_IN_ORDER_CNT), 
                             res.getInt(COLUMN_IN_COURIER_CNT), 
                             res.getInt(COLUMN_IN_OPT_ORDER_CNT), 
-                            res.getInt(COLUMN_IN_MAG_ORDER_CNT), 
-                            res.getString(COLUMN_NAME_PRICE)));
+                            res.getInt(COLUMN_IN_MAG_ORDER_CNT),
+                            res.getInt(COLUMN_IN_RETURN),
+                            res.getInt(COLUMN_IN_REZERVE),
+                            res.getString(COLUMN_NAME_PRODUCT),
+                            res.getString(COLUMN_URL_CONCURENT),
+                            res.getString(COLUMN_HISTORY_LINK),
+                            res.getString(COLUMN_BONUS_REITING),
+                            res.getString(COLUMN_GARANT),
+                            res.getString(COLUMN_URL_IN_MAG),
+                            res.getString(COLUMN_URL_YANDEX),
+                            res.getString(COLUMN_CURRENT_COUNT)
+                    ));*/
                 }while(res.next());
             }
         } catch (SQLException ex) {
@@ -312,6 +354,180 @@ public class DbWorker {
         }
         return productArrayList;
     }
-
-   
+    
+    /**
+     * Получаем дочерние узлы подкаталога
+     * @param idCatalog
+     * @return 
+     */
+    
+    public ArrayList<CatalogNode> selectChildrensCatalogNode(int idCatalog){
+        String SELECT_CHILDRENS = "SELECT * FROM " + TABLE_CATALOGS +
+                " WHERE " + COLUMN_CATALOG_PARENT + " = " + idCatalog;
+        ArrayList<CatalogNode> catalogList = null;
+        try{
+            Statement statement = connection.createStatement();
+            ResultSet res = statement.executeQuery(SELECT_CHILDRENS);
+            catalogList = new ArrayList<>();
+            if(res.first()){
+                do{
+                    catalogList.add(new CatalogNode(res.getInt(COLUMN_CATALOG_ID_IN_MAG), 
+                            res.getInt(COLUMN_CATALOG_PARENT), 
+                            res.getString(COLUMN_CATALOG_NAME), 
+                            res.getString(COLUMN_CATALOG_HREF)));
+                }while(res.next());
+            }
+        }catch (SQLException ex){
+            Logger.getLogger(DbWorker.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return catalogList;
+    }
+    
+    /**
+     * Получение узла каталога по коду на сайте
+     * @param idCatalogInMagazine
+     * @return 
+     */
+    public CatalogNode selectCatalogNode(int idCatalogInMagazine){
+        String SELECT_CATALOG_NODE = "SELECT * FROM " + TABLE_CATALOGS +
+                " WHERE " + COLUMN_CATALOG_ID_IN_MAG + " = " + idCatalogInMagazine;
+        CatalogNode node = null;
+        try{
+            Statement statement = connection.createStatement();
+            ResultSet res = statement.executeQuery(SELECT_CATALOG_NODE);
+            if(res.first()){
+                node = new CatalogNode(res.getInt(COLUMN_CATALOG_ID_IN_MAG), 
+                    res.getInt(COLUMN_CATALOG_PARENT), 
+                    res.getString(COLUMN_CATALOG_NAME), 
+                    res.getString(COLUMN_CATALOG_HREF));
+            }
+        }catch (SQLException ex){
+            Logger.getLogger(DbWorker.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        return node;
+    }
+    
+    /**
+     * Добавление узла каталога
+     * @param idCatalog
+     * @param idParent
+     * @param name 
+     */    
+    public void insertRowCatalog(int idCatalog, int idParent, String name, String href){
+        String INSERT_ROW_CATALOG = "INSERT INTO " + TABLE_CATALOGS + " (" +
+                COLUMN_CATALOG_ID_IN_MAG + ", " +
+                COLUMN_CATALOG_PARENT + ", " +
+                COLUMN_CATALOG_NAME + ", " +
+                COLUMN_CATALOG_HREF + ") VALUES (?,?,?,?)";
+        try {
+            PreparedStatement statement = connection.prepareStatement(INSERT_ROW_CATALOG);
+            statement.setInt(1,idCatalog);
+            statement.setInt(2, idParent);
+            statement.setString(3, name);
+            statement.setString(4, href);
+            statement.execute();
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DbWorker.class.getName()).log(Level.SEVERE, null, ex);
+        }        
+    }  
+    
+    /**
+     * Добавление строки товара
+     * 
+     * @param idProduct
+     * @param history2_link
+     * @param bonus_reiting
+     * @param name_product
+     * @param garant
+     * @param url_product
+     * @param url_yamarket
+     * @param current_count
+     * @param cnt_in_order
+     * @param cnt_in_courier
+     * @param cnt_in_opt_order
+     * @param cnt_in_mag_order
+     * @param cnt_in_return
+     * @param cnt_in_reserve
+     * @param idCatalog
+     * @param idBrend 
+     */
+    public void insertRowProduct(String idProduct, String history2_link, String bonus_reiting, 
+            String name_product, String garant, String url_product,
+            String url_yamarket, String current_count, int cnt_in_order,
+            int cnt_in_courier, int cnt_in_opt_order, int cnt_in_mag_order, 
+            int cnt_in_return, int cnt_in_reserve, int idCatalog, int idBrend, String url_concurent){
+        
+        String INSERT_ROW_PRODUCT = "INSERT INTO " + TABLE_PRODUCTS + " (" +
+                COLUMN_ID_PRODUCT + ", " +
+                COLUMN_HISTORY_LINK + ", " +
+                COLUMN_BONUS_REITING + ", " +
+                COLUMN_NAME_PRODUCT + ", " +
+                COLUMN_GARANT + ", " +
+                COLUMN_URL_IN_MAG + ", " +
+                COLUMN_URL_YANDEX + ", " +
+                COLUMN_CURRENT_COUNT + ", " +
+                COLUMN_IN_ORDER_CNT + ", " +
+                COLUMN_IN_COURIER_CNT + ", " +
+                COLUMN_IN_OPT_ORDER_CNT + ", " +
+                COLUMN_IN_MAG_ORDER_CNT + ", " +
+                COLUMN_IN_RETURN + ", " +
+                COLUMN_IN_REZERVE + ", " +
+                COLUMN_ID_CATALOG + ", " +
+                COLUMN_ID_BREND + ", " +
+                COLUMN_URL_CONCURENT + ") VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        
+        try {
+            PreparedStatement statement = connection.prepareStatement(INSERT_ROW_PRODUCT);
+            statement.setInt(1, Integer.parseInt(idProduct));
+            statement.setString(2, history2_link);
+            statement.setInt(3, Integer.parseInt(bonus_reiting));
+            statement.setString(4, name_product);
+            statement.setString(5, garant);
+            statement.setString(6, url_product);
+            statement.setString(7, url_yamarket);
+            statement.setInt(8, Integer.parseInt(current_count));
+            statement.setInt(9, cnt_in_order);
+            statement.setInt(10, cnt_in_courier);
+            statement.setInt(11, cnt_in_opt_order);
+            statement.setInt(12, cnt_in_mag_order);
+            statement.setInt(13, cnt_in_return);
+            statement.setInt(14, cnt_in_reserve);
+            statement.setInt(15, idCatalog);
+            statement.setInt(16, idBrend);
+            statement.setString(17, url_concurent);
+            statement.execute();            
+            
+        } catch (SQLException ex) {
+            Logger.getLogger(DbWorker.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    /**
+     * Добавление новой информации о цене
+     * @param name
+     * @param valuePrice
+     * @param date 
+     */
+    public void insertRowReestrPrice(String name, double valuePrice, java.util.Date date, String idProduct, String autor){
+        String INSERT_ROW_REESTR = "INSERT INTO " + TABLE_REESTR_PRICES + " (" +
+                COLUMN_NAME_PRICE + ", " +
+                COLUMN_DATE_UPDATE_PRICE + ", " +
+                COLUMN_VALUE_PRICE + ", " +
+                COLUMN_ID_PRODUCT + ", " +
+                COLUMN_AUTOR_UPDATE + ") VALUES (?,?,?,?,?)";
+        
+        try {
+            PreparedStatement statement = connection.prepareStatement(INSERT_ROW_REESTR);
+            statement.setString(1, name);
+            statement.setDouble(3, valuePrice);
+            statement.setTimestamp(2, new Timestamp(date.getTime()));
+            statement.setInt(4, Integer.parseInt(idProduct));
+            statement.setString(5, autor);
+            statement.execute();
+        } catch (SQLException ex) {
+            Logger.getLogger(DbWorker.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
 }

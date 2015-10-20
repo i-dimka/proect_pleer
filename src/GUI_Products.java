@@ -1,21 +1,40 @@
 
 import db_modul.DbWorker;
+import db_modul.ParsingSite;
 import java.awt.BorderLayout;
+import java.awt.Component;
+import java.awt.Container;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
+import java.io.IOException;
+import java.net.ProtocolException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFormattedTextField;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
+import javax.swing.JSeparator;
 import javax.swing.JTextField;
 import javax.swing.JToggleButton;
+import javax.swing.JTree;
 import javax.swing.ScrollPaneConstants;
+import javax.swing.UIManager;
+import javax.swing.event.TreeSelectionEvent;
+import javax.swing.event.TreeSelectionListener;
+import javax.swing.tree.DefaultMutableTreeNode;
+import products_modul.CatalogNode;
 import products_modul.Product;
 
 
@@ -27,19 +46,66 @@ public class GUI_Products extends javax.swing.JPanel {
     
     private ArrayList<Product> productArrayList;
     private static DbWorker db;
+    private ParsingSite parsing;
     
     public GUI_Products() {        
         
-        db = new DbWorker();
-        productArrayList = db.selectAllProducts();   
+        db = new DbWorker(false);     
         
-        initListPanelRows();
+        parsing = new ParsingSite();
+        parsing.authorisation();
+        parsing.setDb(db);        
         
-        DbWorker.dbDisconnect();
+        //parsing.parseTreeCatalog(false);
+        initWindowTreeCatalog(); 
+        productArrayList = new ArrayList<Product>();
+        createFilterPanelsProduct();
+        packPanelsProduct(createPanelRows());
+        updatePanelRows(parsing.startParsingFile());//для теста
+        
+        //DbWorker.dbDisconnect();
         
     }
+    
+    private void initWindowTreeCatalog(){
+        boolean packFrameTreeCatalog = false;
+        FrameTreeCatalog frameTreeCatalog = new FrameTreeCatalog();
+        //Упаковка менеджером 
+        if(!packFrameTreeCatalog){
+            frameTreeCatalog.pack();
+        }
+        else{
+            frameTreeCatalog.validate();
+        }
+        //ЗАдание размера и положение формы с соответствием размера экрана
+        Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+        Dimension frameTreeSize = frameTreeCatalog.getSize();
+        if(frameTreeSize.height > screenSize.height){
+            frameTreeSize.height = screenSize.height;
+        }
+        if (frameTreeSize.width > screenSize.width){
+            frameTreeSize.width = screenSize.width;
+        }
+        frameTreeCatalog.setLocation((screenSize.width - frameTreeSize.width) / 2, 
+                 (screenSize.height - frameTreeSize.height) / 2);
+        frameTreeCatalog.setVisible(true);
+        JTree jTreeCatalog = ((CatalogPanel)frameTreeCatalog.getContentPane().getComponents()[0]).getTreeCatalog();
+        jTreeCatalog.addTreeSelectionListener(new TreeSelectionListener() {
 
-    private void initListPanelRows(){
+            @Override
+            public void valueChanged(TreeSelectionEvent e) {
+                DefaultMutableTreeNode node = (DefaultMutableTreeNode)jTreeCatalog.getLastSelectedPathComponent();
+                if(node == null)return;
+                CatalogNode catalogNode = (CatalogNode)node.getUserObject();
+                System.out.println(catalogNode.toString());
+                productArrayList = parsing.startParsing(catalogNode.getIdCatalog(), "http://monitor.pleer.ru/monitor/" + catalogNode.getHref());
+                //productArrayList = parsing.startParsingFile();
+                updatePanelRows(productArrayList);
+            }
+        });
+    }
+
+    private void createFilterPanelsProduct(){
         
       jPanel15 = new javax.swing.JPanel();
         jToggleButton1 = new javax.swing.JToggleButton();
@@ -119,69 +185,7 @@ public class GUI_Products extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
         jToggleButton11 = new javax.swing.JToggleButton();
         jCheckBox36 = new javax.swing.JCheckBox();
-        jPanelListProducts = new javax.swing.JPanel();
-        jPanelRowProduct = new javax.swing.JPanel();
-        jPanelStatSales = new javax.swing.JPanel();
-        jlabStat7dayRetail = new javax.swing.JLabel();
-        jlabStat7dayOpt = new javax.swing.JLabel();
-        jlabCntPreOrder = new javax.swing.JLabel();
-        jSeparatorStatSalesPanel = new javax.swing.JSeparator();
-        jlabStat14dayRetail = new javax.swing.JLabel();
-        jlabStat14dayOpt = new javax.swing.JLabel();
-        jPanelPrices = new javax.swing.JPanel();
-        jTextFieldPriceForDelivery = new javax.swing.JTextField();
-        jLabMidlInPrice = new javax.swing.JLabel();
-        jLabPriceRetail = new javax.swing.JLabel();
-        jLabPreviewPrice = new javax.swing.JLabel();
-        jTextFieldMinPriceForOpt = new javax.swing.JTextField();
-        jLabMarkupPriceRetail = new javax.swing.JLabel();
-        jTextFieldPriceRRC = new javax.swing.JTextField();
-        jLabelDileviryPrice = new javax.swing.JLabel();
-        jButtonCompetitionList = new javax.swing.JButton();
-        jPanelPurchase = new javax.swing.JPanel();
-        jButtonDileviryDatePlus1 = new javax.swing.JButton();
-        jButtonDileviryDatePlus2 = new javax.swing.JButton();
-        jButtonDileviryDatePlus3 = new javax.swing.JButton();
-        jComboBoxDayDileviry = new javax.swing.JComboBox();
-        jComboBoxMonthDileviry = new javax.swing.JComboBox();
-        jTextFieldCntWait = new javax.swing.JTextField();
-        jTextFieldCommentPrice = new javax.swing.JTextField();
-        jTextFieldUpPricePreviewDileviry = new javax.swing.JTextField();
-        jButtonDateQuery = new javax.swing.JButton();
-        jTextFieldSecondComment = new javax.swing.JTextField();
-        jFormattedTextFieldThirdComment = new javax.swing.JFormattedTextField();
-        jPanelProduct = new javax.swing.JPanel();
-        jButtonStatSale14Day = new javax.swing.JButton();
-        jButtonHistory2 = new javax.swing.JButton();
-        jButtonEP34 = new javax.swing.JButton();
-        jToggleButtonPriceLook = new javax.swing.JToggleButton();
-        jToggleButton16 = new javax.swing.JToggleButton();
-        jToggleButton14 = new javax.swing.JToggleButton();
-        jButtonOpenHistori = new javax.swing.JButton();
-        jButtonLinkYA = new javax.swing.JButton();
-        jToggleButtonLInkPlusMinus = new javax.swing.JToggleButton();
-        jButtonStatSale28Day = new javax.swing.JButton();
-        jFormattedTextFieldLinkNaklOrder = new javax.swing.JFormattedTextField();
-        jFormattedTextFieldCenturyBrend = new javax.swing.JFormattedTextField();
-        jToggleButtonPriceUpDown = new javax.swing.JToggleButton();
-        jButton14 = new javax.swing.JButton();
-        jButton16 = new javax.swing.JButton();
-        jButtonMarkerBrend = new javax.swing.JButton();
-        jButtonIdProduct = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jFormattedTextFieldGarant = new javax.swing.JFormattedTextField();
-        jToggleButtonDear = new javax.swing.JToggleButton();
-        jButton17 = new javax.swing.JButton();
-        jButtonRobot = new javax.swing.JButton();
-        jFormattedTextFieldNameProduct = new javax.swing.JFormattedTextField();
-        jButton69 = new javax.swing.JButton();
-        jTextFieldReiting = new javax.swing.JTextField();
-        jPanelSklad = new javax.swing.JPanel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel38 = new javax.swing.JLabel();
+        
 
         setForeground(java.awt.SystemColor.window);
         setAutoscrolls(true);
@@ -765,18 +769,89 @@ public class GUI_Products extends javax.swing.JPanel {
                     .addComponent(jToggleButton11)
                     .addComponent(jToggleButton12))
                 .addGap(0, 0, 0))
-        );
+        );         
 
+    }   
+    
+    private JPanel createPanelRows(){
+        
+        jPanelRowProduct = new JPanel();
+        jPanelStatSales = new JPanel();
+        jlabStat7dayRetail = new JLabel();
+        jlabStat7dayOpt = new JLabel();
+        jlabCntPreOrder = new JLabel();
+        jSeparatorStatSalesPanel = new JSeparator();
+        jlabStat14dayRetail = new JLabel();
+        jlabStat14dayOpt = new JLabel();
+        jPanelPrices = new JPanel();
+        jTextFieldPriceForDelivery = new JTextField();
+        jLabMidlInPrice = new JLabel();
+        jLabPriceRetail = new JLabel();
+        jLabPreviewPrice = new JLabel();
+        jTextFieldMinPriceForOpt = new JTextField();
+        jLabMarkupPriceRetail = new JLabel();
+        jTextFieldPriceRRC = new JTextField();
+        jLabelDileviryPrice = new JLabel();
+        jButtonCompetitionList = new JButton();
+        jPanelPurchase = new JPanel();
+        jButtonDileviryDatePlus1 = new JButton();
+        jButtonDileviryDatePlus2 = new JButton();
+        jButtonDileviryDatePlus3 = new JButton();
+        jComboBoxDayDileviry = new JComboBox();
+        jComboBoxMonthDileviry = new JComboBox();
+        jTextFieldCntWait = new JTextField();
+        jTextFieldCommentPrice = new JTextField();
+        jTextFieldUpPricePreviewDileviry = new JTextField();
+        jButtonDateQuery = new JButton();
+        jTextFieldSecondComment = new JTextField();
+        jFormattedTextFieldThirdComment = new JFormattedTextField();
+        jPanelProduct = new JPanel();
+        jButtonStatSale14Day = new JButton();
+        jButtonHistory2 = new JButton();
+        jButtonEP34 = new JButton();
+        jToggleButtonPriceLook = new JToggleButton();
+        jToggleButton16 = new JToggleButton();
+        jToggleButton14 = new JToggleButton();
+        jButtonOpenHistori = new JButton();
+        jButtonLinkYA = new JButton();
+        jToggleButtonLInkPlusMinus = new JToggleButton();
+        jButtonStatSale28Day = new JButton();
+        jFormattedTextFieldLinkNaklOrder = new JFormattedTextField();
+        jFormattedTextFieldCenturyBrend = new JFormattedTextField();
+        jToggleButtonPriceUpDown = new JToggleButton();
+        jButton14 = new JButton();
+        jButton16 = new JButton();
+        jButtonMarkerBrend = new JButton();
+        jButtonIdProduct = new JButton();
+        jButton13 = new JButton();
+        jFormattedTextFieldGarant = new JFormattedTextField();
+        jToggleButtonDear = new JToggleButton();
+        jButton17 = new JButton();
+        jButtonRobot = new JButton();
+        jFormattedTextFieldNameProduct = new JFormattedTextField();
+        jButton69 = new JButton();
+        jTextFieldReiting = new JTextField();
+        jPanelSklad = new JPanel();
+        jLabel34 = new JLabel();
+        jLabel35 = new JLabel();
+        jLabel36 = new JLabel();
+        jLabel37 = new JLabel();
+        jLabel38 = new JLabel();
+        
+        JPanel jPanelListProducts = new JPanel();
+        
         jPanelListProducts.setBorder(javax.swing.BorderFactory.createTitledBorder("Товары"));
         jPanelListProducts.setName(""); // NOI18N
         JPanel panel = new JPanel();
         JScrollPane jScrollPane1 = new JScrollPane(panel);
-        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        //jScrollPane1.setAutoscrolls(true);        
-       jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));       
+        jScrollPane1.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+       
         
         for(Product product : productArrayList){
             
+        FocusChangeListener focusChangeListener = new FocusChangeListener(product);
+        
         JPanel jPanelRowProduct = new JPanel();
         
         jPanelRowProduct.setBackground(new java.awt.Color(217, 244, 217));
@@ -793,23 +868,23 @@ public class GUI_Products extends javax.swing.JPanel {
 
         jlabStat7dayRetail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jlabStat7dayRetail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlabStat7dayRetail.setText("125");
-        jlabStat7dayRetail.setToolTipText("Продажи товара за 3 дня");
+        jlabStat7dayRetail.setText(Integer.toString(product.getSales7day()));
+        jlabStat7dayRetail.setToolTipText("Продажи товара за 7 дней");
         jlabStat7dayRetail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
         
         JLabel jlabStat7dayOpt = new JLabel();
 
         jlabStat7dayOpt.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jlabStat7dayOpt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlabStat7dayOpt.setText("96");
-        jlabStat7dayOpt.setToolTipText("Оптовые продажи товара за 3 дня");
+        jlabStat7dayOpt.setText(Integer.toString(product.getOptsales7day()));
+        jlabStat7dayOpt.setToolTipText("Оптовые продажи товара за 7 дней");
         jlabStat7dayOpt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0)));
         
         JLabel jlabCntPreOrder = new JLabel();
 
         jlabCntPreOrder.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jlabCntPreOrder.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlabCntPreOrder.setText("0");
+        jlabCntPreOrder.setText("x");
         jlabCntPreOrder.setToolTipText("Количество пред заказов на товар");
         jlabCntPreOrder.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 204, 51)));
         
@@ -821,16 +896,16 @@ public class GUI_Products extends javax.swing.JPanel {
 
         jlabStat14dayRetail.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jlabStat14dayRetail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlabStat14dayRetail.setText("554");
-        jlabStat14dayRetail.setToolTipText("Продажи товара за 7 дней");
+        jlabStat14dayRetail.setText(Integer.toString(product.getSales14day()));
+        jlabStat14dayRetail.setToolTipText("Продажи товара за 14 дней");
         jlabStat14dayRetail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 204)));
         
         JLabel jlabStat14dayOpt = new JLabel();
 
         jlabStat14dayOpt.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jlabStat14dayOpt.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlabStat14dayOpt.setText("340");
-        jlabStat14dayOpt.setToolTipText("Оптовые продажи товара за 7 дней");
+        jlabStat14dayOpt.setText(Integer.toString(product.getOptsales14day()));
+        jlabStat14dayOpt.setToolTipText("Оптовые продажи товара за 14 дней");
         jlabStat14dayOpt.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(204, 0, 0)));
         
         
@@ -885,42 +960,35 @@ public class GUI_Products extends javax.swing.JPanel {
         JTextField jTextFieldPriceForDelivery = new JTextField();
 
         jTextFieldPriceForDelivery.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextFieldPriceForDelivery.setText("3546");
-        jTextFieldPriceForDelivery.setToolTipText("Цена в интернет магазине");
-        jTextFieldPriceForDelivery.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextFieldPriceForDeliveryActionPerformed(evt);
-            }
-
-            private void jTextFieldPriceForDeliveryActionPerformed(ActionEvent evt) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
-        });
+        jTextFieldPriceForDelivery.setText(Double.toString(product.getCost(4)));
+        jTextFieldPriceForDelivery.setToolTipText("Текущая цена в инт маг");
+        jTextFieldPriceForDelivery.setName("rubprice");
+        jTextFieldPriceForDelivery.addFocusListener(focusChangeListener);
         
         JLabel jLabMidlInPrice = new JLabel();
             
         jLabMidlInPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabMidlInPrice.setText("Вход");
-        jLabMidlInPrice.setToolTipText("Разбавленных входной ценник");
+        jLabMidlInPrice.setText(Double.toString(product.getCost(2)));
+        jLabMidlInPrice.setToolTipText("Разбавленный входной ценник");
         jLabMidlInPrice.setPreferredSize(new java.awt.Dimension(44, 20));
         
         JLabel jLabPriceRetail = new JLabel();
 
         jLabPriceRetail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabPriceRetail.setText("В магазине");
+        jLabPriceRetail.setText(String.valueOf(product.getCost(6)));
         jLabPriceRetail.setToolTipText("Цена в розничном магазине");
         
         JLabel jLabPreviewPrice = new JLabel();
 
         jLabPreviewPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabPreviewPrice.setText("пр цен");
+        jLabPreviewPrice.setText(String.valueOf(product.getCost(5)));
         jLabPreviewPrice.setToolTipText("Предыдущая цена на товар");
         jLabPreviewPrice.setPreferredSize(new java.awt.Dimension(44, 20));
         
         JTextField jTextFieldMinPriceForOpt = new JTextField();
 
         jTextFieldMinPriceForOpt.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextFieldMinPriceForOpt.setText("Опт ог");
+        jTextFieldMinPriceForOpt.setText("Мин_ц_опт");
         jTextFieldMinPriceForOpt.setToolTipText("Минимальная цена для продажи оптовиками (ограничитель)");
         jTextFieldMinPriceForOpt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -935,13 +1003,13 @@ public class GUI_Products extends javax.swing.JPanel {
         JLabel jLabMarkupPriceRetail = new JLabel();
 
         jLabMarkupPriceRetail.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabMarkupPriceRetail.setText("Нац маг");
+        jLabMarkupPriceRetail.setText("Ц_Нац_маг");
         jLabMarkupPriceRetail.setToolTipText("Наценка розничного магазина");
         
         JTextField jTextFieldPriceRRC = new JTextField();
 
         jTextFieldPriceRRC.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextFieldPriceRRC.setText("РРЦ");
+        jTextFieldPriceRRC.setText(String.valueOf(product.getCost(3)));
         jTextFieldPriceRRC.setToolTipText("Рекомендованная розничная цена");
         jTextFieldPriceRRC.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -956,15 +1024,22 @@ public class GUI_Products extends javax.swing.JPanel {
         JLabel jLabelDileviryPrice = new JLabel();
 
         jLabelDileviryPrice.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelDileviryPrice.setText("достав");
+        jLabelDileviryPrice.setText(String.valueOf(product.getCost(7)));
         jLabelDileviryPrice.setToolTipText("Стоимость доставки товара");
         
         JButton jButtonCompetitionList = new JButton();
 
-        jButtonCompetitionList.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
+        jButtonCompetitionList.setFont(new java.awt.Font("Tahoma", 0, 10)); 
         jButtonCompetitionList.setText("Конкуренты");
-        jButtonCompetitionList.setToolTipText("Ссылка на цены конкурентов");
+        jButtonCompetitionList.setToolTipText(product.getUrl_conkurent());
         jButtonCompetitionList.setMargin(new java.awt.Insets(2, 1, 2, 1));
+        jButtonCompetitionList.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(product.getUrl_conkurent());
+            }
+        });
 
         javax.swing.GroupLayout jPanelPricesLayout = new javax.swing.GroupLayout(jPanelPrices);
         jPanelPrices.setLayout(jPanelPricesLayout);
@@ -1058,12 +1133,12 @@ public class GUI_Products extends javax.swing.JPanel {
         
         JTextField jTextFieldCntWait = new JTextField();
 
-        jTextFieldCntWait.setText("кол-во");
+        jTextFieldCntWait.setText("x");
         jTextFieldCntWait.setToolTipText("Ожидаемое количество товара");
         
         JTextField jTextFieldCommentPrice = new JTextField();
 
-        jTextFieldCommentPrice.setText("коммент с ценой");
+        jTextFieldCommentPrice.setText(product.getOneComment());
         jTextFieldCommentPrice.setToolTipText("Цена по которой ожидается поставка");
         
         JTextField jTextFieldUpPricePreviewDileviry = new JTextField();
@@ -1075,20 +1150,22 @@ public class GUI_Products extends javax.swing.JPanel {
 
         jButtonDateQuery.setBackground(new java.awt.Color(255, 153, 153));
         jButtonDateQuery.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jButtonDateQuery.setText("26.04");
+        jButtonDateQuery.setText("x");
         jButtonDateQuery.setToolTipText("Дата последнего запроса товара");
         jButtonDateQuery.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jButtonDateQuery.setMargin(new java.awt.Insets(2, 1, 2, 1));
         
         JTextField jTextFieldSecondComment = new JTextField();
 
-        jTextFieldSecondComment.setText("вторая строка с комментом");
+        jTextFieldSecondComment.setText(product.getAdditionalComment());
         jTextFieldSecondComment.setToolTipText("Строка для комментариев");
         
         JFormattedTextField jFormattedTextFieldThirdComment = new JFormattedTextField();
 
-        jFormattedTextFieldThirdComment.setText("вторая строка с комментом");
+        jFormattedTextFieldThirdComment.setText(product.getMoreComment());
         jFormattedTextFieldThirdComment.setToolTipText("Расширяемая строка для комментариев");
+        jFormattedTextFieldThirdComment.setName("moreComment");
+        jFormattedTextFieldThirdComment.addFocusListener(focusChangeListener);
 
         javax.swing.GroupLayout jPanelPurchaseLayout = new javax.swing.GroupLayout(jPanelPurchase);
         jPanelPurchase.setLayout(jPanelPurchaseLayout);
@@ -1168,18 +1245,16 @@ public class GUI_Products extends javax.swing.JPanel {
         JButton jButtonHistory2 = new JButton();
         jButtonHistory2.setFont(new java.awt.Font("Segoe UI", 1, 11)); // NOI18N
         jButtonHistory2.setText("ист.2");
-        jButtonHistory2.setToolTipText("ссылка на историю 2");
+        jButtonHistory2.setToolTipText(product.getHistory2_link());
         jButtonHistory2.setContentAreaFilled(false);
         jButtonHistory2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButtonHistory2.setMargin(new java.awt.Insets(2, 4, 2, 4));
-        jButtonHistory2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButtonHistory2ActionPerformed(evt);
-            }
-
-            private void jButtonHistory2ActionPerformed(ActionEvent evt) {
-                throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-            }
+        jButtonHistory2.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.out.println(product.getHistory2_link());
+            }        
+            
         });
         
         JButton jButtonEP34 = new JButton();
@@ -1394,7 +1469,7 @@ public class GUI_Products extends javax.swing.JPanel {
         
         JFormattedTextField jFormattedTextFieldGarant = new JFormattedTextField();
 
-        jFormattedTextFieldGarant.setText("Гарантия 1 год");
+        jFormattedTextFieldGarant.setText(product.getGarant());
         jFormattedTextFieldGarant.setToolTipText("Срок гарантии");
         jFormattedTextFieldGarant.setFont(new java.awt.Font("Tahoma", 0, 10)); // NOI18N
         
@@ -1435,7 +1510,7 @@ public class GUI_Products extends javax.swing.JPanel {
         jTextFieldReiting.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jTextFieldReiting.setForeground(new java.awt.Color(70, 100, 0));
         jTextFieldReiting.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextFieldReiting.setText("5000");
+        jTextFieldReiting.setText(product.getBonus_reiting());
         jTextFieldReiting.setToolTipText("Бонус менеджера");
 
         javax.swing.GroupLayout jPanelProductLayout = new javax.swing.GroupLayout(jPanelProduct);
@@ -1449,9 +1524,9 @@ public class GUI_Products extends javax.swing.JPanel {
                         .addComponent(jButtonOpenHistori, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                         .addComponent(jButtonIdProduct, javax.swing.GroupLayout.DEFAULT_SIZE, 52, Short.MAX_VALUE))
                     .addGroup(jPanelProductLayout.createSequentialGroup()
-                        .addGap(2, 2, 2)
+                        .addGap(3, 3, 3)
                         .addComponent(jTextFieldReiting, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(3, 3, 3)
+                .addGap(2, 2, 2)
                 .addGroup(jPanelProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanelProductLayout.createSequentialGroup()
                         .addComponent(jFormattedTextFieldLinkNaklOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 235, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1508,7 +1583,7 @@ public class GUI_Products extends javax.swing.JPanel {
                         .addGap(0, 0, 0)
                         .addComponent(jButtonHistory2, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(jTextFieldReiting, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextFieldReiting, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanelProductLayout.createSequentialGroup()
                         .addGroup(jPanelProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanelProductLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1544,7 +1619,7 @@ public class GUI_Products extends javax.swing.JPanel {
                                 .addComponent(jButtonStatSale14Day, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jButtonStatSale28Day, javax.swing.GroupLayout.PREFERRED_SIZE, 17, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanelProductLayout.createSequentialGroup()
-                                .addComponent(jFormattedTextFieldLinkNaklOrder, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jFormattedTextFieldLinkNaklOrder, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(1, 1, 1)))))
                 .addGap(2, 2, 2))
         );
@@ -1557,7 +1632,7 @@ public class GUI_Products extends javax.swing.JPanel {
         JLabel jLabel34 = new JLabel();
 
         jLabel34.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
-        jLabel34.setText("Наличие");
+        jLabel34.setText(product.getCurrent_count());
         jLabel34.setToolTipText("Наличие товара на складе");
         
         JLabel jLabel35 = new JLabel();
@@ -1664,22 +1739,11 @@ public class GUI_Products extends javax.swing.JPanel {
         //jPanelListProducts.setPreferredSize(new Dimension(1000, 500));
         jPanelListProducts.setLayout(new BoxLayout(jPanelListProducts, BoxLayout.Y_AXIS));
         jPanelListProducts.add(jScrollPane1);
-       
         
-        /*javax.swing.GroupLayout jPanelListProductsLayout = new javax.swing.GroupLayout(jPanelListProducts);
-        jPanelListProducts.setLayout(jPanelListProductsLayout);
-        jPanelListProductsLayout.setHorizontalGroup(
-            jPanelListProductsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelListProductsLayout.createSequentialGroup()
-                .addComponent(jScrollPane1))
-        );
-        jPanelListProductsLayout.setVerticalGroup(
-            jPanelListProductsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelListProductsLayout.createSequentialGroup()
-                .addComponent(jScrollPane1))
-        );*/
-        
-         
+        return jPanelListProducts;       
+    }
+
+    private void packPanelsProduct(JPanel jPanelListProducts){
         JPanel panel2 = new JPanel();
         panel2.setLayout(new BoxLayout(panel2, BoxLayout.Y_AXIS));
         panel2.add(jPanel15);
@@ -1690,37 +1754,46 @@ public class GUI_Products extends javax.swing.JPanel {
          this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS));
          this.add(panel2);
          this.add(jPanelListProducts);
-
-        /*javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)           
-            .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanelListProducts)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, 0)
-                .addComponent(jPanelListProducts))
-        );*/
-         
-         
-
-    }                   
-
+    }
     
+    public void updatePanelRows(ArrayList<Product> productArrayList){
+        this.remove(1);
+        this.productArrayList = productArrayList;
+        createPanelRows();
+        this.add(createPanelRows());
+    }
     
+    /*public class FocusChangeListener implements FocusListener{
+
+        @Override
+        public void focusGained(FocusEvent e) {
+        }
+
+        @Override
+        public void focusLost(FocusEvent e) {
+            StringBuilder builder = new StringBuilder(((JTextField)e.getSource()).getName());
+            String idPr = builder.substring(builder.indexOf("_") + 1);
+            String nameElement = builder.substring(0, builder.indexOf("_"));
+            if(nameElement.equals("rubprice")){
+                builder.delete(0, builder.length());
+                builder.append("pid=");
+                builder.append(idPr);
+                builder.append("&oldPrice=");
+                builder.append("");
+                builder.append("&newPrice=");
+                builder.append(((JTextField)e.getSource()).getText());
+                builder.append("&groupChange=0&ajax=1");
+                    
+                try {
+                    ParsingSite.getAuthSite().sendPost("http://monitor.pleer.ru/monitor/classes/product/ajax.php", builder.toString());
+                } catch (ProtocolException ex) {
+                    Logger.getLogger(GUI_Products.class.getName()).log(Level.SEVERE, null, ex);
+                } catch (IOException ex) {
+                    Logger.getLogger(GUI_Products.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+    }*/
     
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton13;
@@ -1815,8 +1888,7 @@ public class GUI_Products extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JPanel jPanelListProducts;
+    private javax.swing.JPanel jPanel9;    
     private javax.swing.JPanel jPanelPrices;
     private javax.swing.JPanel jPanelProduct;
     private javax.swing.JPanel jPanelPurchase;

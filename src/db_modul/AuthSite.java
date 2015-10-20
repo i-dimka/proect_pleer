@@ -21,6 +21,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import java.util.zip.GZIPInputStream;
 import javax.net.ssl.HttpsURLConnection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -35,7 +36,8 @@ public class AuthSite {
     private List<String> cookies;
     private HttpURLConnection conn;
     private final String url = "http://monitor.pleer.ru/monitor/";
-    private final String USER_AGENT = "Mozilla/5.0";   
+    private final String url_test = "http://test.branches.monitor.svn.pleer.ru/monitor/";
+    private final String USER_AGENT = "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/44.0.2403.107 Safari/537.36";   
     private String page;
     private String postParams;
    
@@ -45,7 +47,7 @@ public class AuthSite {
             CookieHandler.setDefault(new CookieManager());
             page = getPageContent(url);
             postParams = getFormParams(page, username, password);
-            sendPost(url, postParams);
+            sendPost("http://monitor.pleer.ru/monitor/", postParams);
         } catch (ProtocolException ex) {
             Logger.getLogger(AuthSite.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -53,7 +55,7 @@ public class AuthSite {
         }
     }
     
-    private void sendPost(String url, String postParams) throws MalformedURLException, ProtocolException, IOException{
+    public void sendPost(String url, String postParams) throws MalformedURLException, ProtocolException, IOException{
         URL obj = new URL(url);
         conn = (HttpURLConnection) obj.openConnection();
         
@@ -63,16 +65,18 @@ public class AuthSite {
         conn.setRequestProperty("User-Agent", USER_AGENT);
         conn.setRequestProperty("Accept",
 		"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
-        //conn.setRequestProperty("Accept-Language", "en-US,en; q=0.5");
-        if(cookies != null){
+        conn.setRequestProperty("Charset", "windows-1251");
+        conn.setRequestProperty("Accept-Language", "ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4");
+        conn.setRequestProperty("Cache-Control", "max-age=0");
             for(String cookie : cookies){
                 conn.addRequestProperty("Cookie", cookie.split(";", 1)[0]);
             }
-        }
         conn.setRequestProperty("Connection", "keep-alive");
-        conn.setRequestProperty("Referer", "http://monitor.pleer.ru/monitor/");
-	conn.setRequestProperty("Content-Type", "text/html; charset=windows-1251");
+	conn.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
 	conn.setRequestProperty("Content-Length", Integer.toString(postParams.length()));
+        conn.setRequestProperty("Origin", "http://monitor.pleer.ru");
+        conn.setRequestProperty("Referer", "http://monitor.pleer.ru/monitor/");
+        conn.setRequestProperty("Upgrade-Insecure-Requests", "1");
         conn.setDoOutput(true);
         conn.setDoInput(true);
         
@@ -85,11 +89,9 @@ public class AuthSite {
         System.out.println("\nSending 'POST' request to URL : " + url);
 	System.out.println("Post parameters : " + postParams);
 	System.out.println("Response Code : " + responseCode);
-        /*for(String cook : cookies){
-            System.out.println(cook);
-        }*/
         
-        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        
+        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "windows-1251"));
         String inputLine;
         StringBuffer response = new StringBuffer();
         
@@ -110,12 +112,9 @@ public class AuthSite {
         conn.setRequestProperty("User-Agent", USER_AGENT);
         conn.setRequestProperty("Accept",
 		"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8");
-        //conn.setRequestProperty("Accept-Encoding", "gzip, deflate, sdch");
-        //conn.setRequestProperty("Accept-Language", "ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4");
-        conn.setRequestProperty("Cache-Control", "max-age=0");
-        conn.setRequestProperty("Connection", "keep-alive");
-        conn.setRequestProperty("Host", "monitor.pleer.ru");
-        conn.setRequestProperty("Upgrade-Insecure-Requests", "1");
+        conn.setRequestProperty("Charset", "windows-1251");
+        conn.setRequestProperty("Accept-Language", "ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4");
+        
         if(cookies != null){
             for(String cookie : cookies){
                 conn.addRequestProperty("Cookie", cookie.split(";", 1)[0]);
@@ -123,9 +122,8 @@ public class AuthSite {
         }
         int responseCode = conn.getResponseCode();
         System.out.println("\nSending 'GET' request to URL : " + url);
-	System.out.println("Response Code : " + responseCode);
         
-        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+        BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), "windows-1251"));
         String inputLine;
         StringBuffer response = new StringBuffer();
         while((inputLine = in.readLine()) != null){
@@ -134,13 +132,14 @@ public class AuthSite {
         in.close();
         
         setCookies(conn.getHeaderFields().get("Set-Cookie"));
-        /*for(String cook : cookies){
+        if(cookies != null){
+        for(String cook : cookies){
             System.out.println(cook);
-        }*/
+        }}
         return response.toString();                
     }
     
-    public String getFormParams(String html, String username, String password) throws UnsupportedEncodingException{
+    private String getFormParams(String html, String username, String password) throws UnsupportedEncodingException{
         System.out.println("Extracting form's data ...");
         Document doc = Jsoup.parse(html);
         
@@ -172,7 +171,13 @@ public class AuthSite {
     }
     
     public void setCookies(List<String> cookies){
-        this.cookies = cookies;
+        if(cookies != null){
+        this.cookies = new ArrayList<String>();        
+        for(String cook : cookies){
+            String str = cook.substring(0, cook.indexOf(";"));
+            this.cookies.add(str);
+        }
+        }
     }
     
 }
